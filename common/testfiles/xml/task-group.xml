@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--*
+** THIS FILE IS MANAGED BY POWERTOOLS. MANUAL CHANGES WILL BE LOST! **
+   Managed By: PowerTools Desktop 3.0.11.1 (R1) (Server v1.0.557)(Java Exported)
+   Managed For: Innovative Insurance Company (3.0.11.1)
+   Export Date: 20150608 18:12:13
+   Exported By: [clint.modien@somecompany.com]
+   Export Code: [5AC65CFE731B923CABCA96B1E8B0156]
+*-->
+<TaskGroups>
+ <TaskGroup Description="Task Group to do Paint Chip Review" Name="Paint Chip Review" TaskGroupResolver="com.somecompany.uw.policy.PolicyTask" id="PaintChipReview">
+    <TaskGroupTypes>
+      <TaskGroupType PackageName="WF" />
+      <TaskGroupType PackageName="UWQuote" />
+      <TaskGroupType PackageName="UWApplication" />
+      <TaskGroupType PackageName="UWPolicy" />
+    </TaskGroupTypes>
+  </TaskGroup>
+  <TaskGroup id="PolicyReview" Description="Policy Reviews go here, typically clerks handle these, but underwriters may pick some up in their downtime" EscalateTo="UWClerk" EscalateToCd="Group" Name="Policy Review">
+    <TaskGroupTypes>
+      <TaskGroupType PackageName="COUser" />
+      <TaskGroupType PackageName="INCustomer" />
+      <TaskGroupType PackageName="WF" />
+      <TaskGroupType PackageName="UWQuote" />
+      <TaskGroupType PackageName="UWApplication" />
+      <TaskGroupType PackageName="UWPolicy" />
+    </TaskGroupTypes>
+  </TaskGroup>
+  <TaskGroup id="Producer" Description="Producer" Name="Producer" TaskGroupResolver="com.somecompany.uw.policy.PolicyTask">
+    <TaskGroupTypes>
+      <TaskGroupType PackageName="WF" />
+      <TaskGroupType PackageName="UWQuote" />
+      <TaskGroupType PackageName="UWApplication" />
+      <TaskGroupType PackageName="UWPolicy" />
+    </TaskGroupTypes>
+  </TaskGroup>
+  <TaskGroup id="UW" Description="Underwriting" EscalateTo="UW" EscalateToCd="Group" Name="Underwriting">
+    <TaskGroupTypes>
+      <TaskGroupType PackageName="COUser" />
+      <TaskGroupType PackageName="INCustomer" />
+      <TaskGroupType PackageName="WF" />
+      <TaskGroupType PackageName="UWQuote" />
+      <TaskGroupType PackageName="UWApplication" />
+      <TaskGroupType PackageName="UWPolicy" />
+    </TaskGroupTypes>
+  </TaskGroup>
+  <TaskGroup id="UWClerk" Description="Underwriting Clerks" EscalateTo="UW" EscalateToCd="Group" Name="Underwriting Clerk">
+    <TaskGroupTypes>
+      <TaskGroupType PackageName="COUser" />
+      <TaskGroupType PackageName="INCustomer" />
+      <TaskGroupType PackageName="WF" />
+      <TaskGroupType PackageName="UWQuote" />
+      <TaskGroupType PackageName="UWApplication" />
+      <TaskGroupType PackageName="UWPolicy" />
+    </TaskGroupTypes>
+  </TaskGroup>
+</TaskGroups>
+

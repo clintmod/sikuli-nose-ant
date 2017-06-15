@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--*
+** THIS FILE IS MANAGED BY POWERTOOLS. MANUAL CHANGES WILL BE LOST! **
+   Managed By: PowerTools Desktop 3.0.11.1 (R1) (Server v1.0.557)(Java Exported)
+   Managed For: Innovative Insurance Company (3.0.11.1)
+   Export Date: 20150623 12:48:53
+   Exported By: [clint.modien@somecompany.com]
+   Export Code: [887787D5220C59B5B03EFFAF9EBDEF7F]
+*-->
+<NoteTemplates>
+  <NoteTemplate id="Underwriting00022" AttachmentCd="Prohibited" CategoryCd="General" DeactivationDt="12/31/2999" Description="1 Agent Note Description" Name="1 Agent Note Name" PriorityCd="1" StickyInd="No">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="AgentNote-Add" />
+      <SecurityAttribute TypeCd="Edit" Value="Yes" />
+      <SecurityAttribute TypeCd="EditPriority" Value="AgentNote-Add" />
+      <SecurityAttribute TypeCd="View" Value="AgentNote-View" />
+      <SecurityAttribute TypeCd="ViewAttachment" Value="AgentNote-View" />
+      <SecurityAttribute TypeCd="Delete" Value="No" />
+      <SecurityAttribute TypeCd="EditProperties" Value="Yes" />
+    </SecurityAttributes>
+    <TagTemplate id="Correspondence" Name="Correspondence" AttachmentMethodCd="Default" />
+    <TagTemplate id="Miscellaneous" Name="Miscellaneous" AttachmentMethodCd="Optional" />
+    <TagTemplate id="RecordedStatement" Name="Recorded Statement" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Statements" Name="Statements" AttachmentMethodCd="Optional" />
+  </NoteTemplate>
+  <NoteTemplate id="ApplicationNote0001" AttachmentCd="Prohibited" CategoryCd="General" DeactivationDt="12/31/2999" Description="Agent Note for $!InsuredName.gets('CommercialName')" Name="Agent Note" PriorityCd="1" StickyInd="No">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="AgentNote-Add" />
+      <SecurityAttribute TypeCd="Edit" Value="No" />
+      <SecurityAttribute TypeCd="EditPriority" Value="AgentNote-Add" />
+      <SecurityAttribute TypeCd="View" Value="AgentNote-View" />
+      <SecurityAttribute TypeCd="ViewAttachment" Value="AgentNote-View" />
+      <SecurityAttribute TypeCd="Delete" Value="No" />
+      <SecurityAttribute TypeCd="EditProperties" Value="Yes" />
+    </SecurityAttributes>
+    <TagTemplate id="Correspondence" Name="Correspondence" AttachmentMethodCd="Default" />
+    <TagTemplate id="Miscellaneous" Name="Miscellaneous" AttachmentMethodCd="Optional" />
+    <TagTemplate id="RecordedStatement" Name="Recorded Statement" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Statements" Name="Statements" AttachmentMethodCd="Optional" />
+  </NoteTemplate>
+  <NoteTemplate id="ApplicationNote0002" AttachmentCd="Prohibited" CategoryCd="General" DeactivationDt="12/31/2999" Description="Company Note for $!InsuredName.gets('CommercialName')" Name="Company Note" PriorityCd="1" StickyInd="No">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="CompanyNote-Add" />
+      <SecurityAttribute TypeCd="Edit" Value="No" />
+      <SecurityAttribute TypeCd="EditPriority" Value="CompanyNote-Add" />
+      <SecurityAttribute TypeCd="View" Value="CompanyNote-View" />
+      <SecurityAttribute TypeCd="ViewAttachment" Value="CompanyNote-View" />
+      <SecurityAttribute TypeCd="Delete" Value="No" />
+      <SecurityAttribute TypeCd="EditProperties" Value="Yes" />
+    </SecurityAttributes>
+    <TagTemplate id="Correspondence" Name="Correspondence" AttachmentMethodCd="Default" />
+    <TagTemplate id="Miscellaneous" Name="Miscellaneous" AttachmentMethodCd="Optional" />
+    <TagTemplate id="RecordedStatement" Name="Recorded Statement" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Statements" Name="Statements" AttachmentMethodCd="Optional" />
+  </NoteTemplate>
+  <NoteTemplate id="ApplicationNote0003" AttachmentCd="Prohibited" CategoryCd="General" DeactivationDt="12/31/2999" Description="Company Privileged Note for $!InsuredName.gets('CommercialName')" Name="Company Privileged Note" PriorityCd="1" StickyInd="No">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="CompanyPrivledgedNote-Add" />
+      <SecurityAttribute TypeCd="Edit" Value="No" />
+      <SecurityAttribute TypeCd="EditPriority" Value="CompanyPrivledgedNote-Add" />
+      <SecurityAttribute TypeCd="View" Value="CompanyPrivledgedNote-View" />
+      <SecurityAttribute TypeCd="ViewAttachment" Value="CompanyPrivledgedNote-View" />
+      <SecurityAttribute TypeCd="Delete" Value="No" />
+      <SecurityAttribute TypeCd="EditProperties" Value="Yes" />
+    </SecurityAttributes>
+    <TagTemplate id="Correspondence" Name="Correspondence" AttachmentMethodCd="Default" />
+    <TagTemplate id="Miscellaneous" Name="Miscellaneous" AttachmentMethodCd="Optional" />
+    <TagTemplate id="RecordedStatement" Name="Recorded Statement" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Statements" Name="Statements" AttachmentMethodCd="Optional" />
+  </NoteTemplate>
+  <NoteTemplate id="ApplicationNote0005" AttachmentCd="Prohibited" CategoryCd="General" DeactivationDt="12/31/2999" Description="Coverage Change for $!InsuredName.gets('CommercialName')" Name="Document To File - Coverage Change" PriorityCd="1" StickyInd="Yes">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="Edit" Value="Yes" />
+      <SecurityAttribute TypeCd="EditPriority" Value="Yes" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="ViewAttachment" Value="No" />
+      <SecurityAttribute TypeCd="Delete" Value="Yes" />
+      <SecurityAttribute TypeCd="EditProperties" Value="Yes" />
+    </SecurityAttributes>
+    <TagTemplate id="Correspondence" Name="Correspondence" AttachmentMethodCd="Default" />
+    <TagTemplate id="Miscellaneous" Name="Miscellaneous" AttachmentMethodCd="Optional" />
+    <TagTemplate id="RecordedStatement" Name="Recorded Statement" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Statements" Name="Statements" AttachmentMethodCd="Optional" />
+  </NoteTemplate>
+  <NoteTemplate id="ApplicationNote0004" AttachmentCd="Prohibited" CategoryCd="General" DeactivationDt="12/31/2999" Description="Letter From Agent Regarding $!InsuredName.gets('CommercialName')" Name="Letter - Agent" PriorityCd="3" StickyInd="Yes">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="Edit" Value="Yes" />
+      <SecurityAttribute TypeCd="EditPriority" Value="Yes" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="ViewAttachment" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="No" />
+      <SecurityAttribute TypeCd="EditProperties" Value="Yes" />
+    </SecurityAttributes>
+    <TagTemplate id="Correspondence" Name="Correspondence" AttachmentMethodCd="Default" />
+    <TagTemplate id="Miscellaneous" Name="Miscellaneous" AttachmentMethodCd="Optional" />
+    <TagTemplate id="RecordedStatement" Name="Recorded Statement" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Statements" Name="Statements" AttachmentMethodCd="Optional" />
+  </NoteTemplate>
+  <NoteTemplate id="ApplicationNote0006" AttachmentCd="Prohibited" CategoryCd="General" DeactivationDt="12/31/2999" Description="A request for review is outstanding on this $Application.gets('TypeCd'). Requested by: $UserInfo.gets('FirstName') $UserInfo.gets('LastName') [$UserInfo.gets('LoginId')]" Name="Request Review Outstanding" PriorityCd="3" StickyInd="Yes">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="No" />
+      <SecurityAttribute TypeCd="Edit" Value="No" />
+      <SecurityAttribute TypeCd="EditPriority" Value="No" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="ViewAttachment" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="No" />
+      <SecurityAttribute TypeCd="EditProperties" Value="Yes" />
+    </SecurityAttributes>
+  </NoteTemplate>
+  <NoteTemplate id="ApplicationNote0007" AttachmentCd="Prohibited" CategoryCd="General" DeactivationDt="12/31/2999" Description="Review response" Name="Review Response" PriorityCd="3" StickyInd="No">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="No" />
+      <SecurityAttribute TypeCd="Edit" Value="No" />
+      <SecurityAttribute TypeCd="EditPriority" Value="No" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="ViewAttachment" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="No" />
+      <SecurityAttribute TypeCd="EditProperties" Value="Yes" />
+    </SecurityAttributes>
+  </NoteTemplate>
+  <NoteTemplate id="ApplicationNote0008" AttachmentCd="Prohibited" CategoryCd="General" DeactivationDt="12/31/2999" Description="Workflow Comments" Name="Workflow Comments" PriorityCd="2" StickyInd="No">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="No" />
+      <SecurityAttribute TypeCd="Edit" Value="No" />
+      <SecurityAttribute TypeCd="EditPriority" Value="No" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="ViewAttachment" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="No" />
+      <SecurityAttribute TypeCd="EditProperties" Value="No" />
+    </SecurityAttributes>
+  </NoteTemplate>
+</NoteTemplates>
+

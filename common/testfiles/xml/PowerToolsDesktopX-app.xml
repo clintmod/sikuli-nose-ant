@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<application xmlns="http://ns.adobe.com/air/application/3.1">
+<!-- Adobe AIR Application Descriptor File Template.
+
+	Specifies parameters for identifying, installing, and launching AIR applications.
+
+	xmlns - The Adobe AIR namespace: http://ns.adobe.com/air/application/2.0
+			The last segment of the namespace specifies the version 
+			of the AIR runtime required for this application to run.
+			
+	minimumPatchLevel - The minimum patch level of the AIR runtime required to run 
+			the application. Optional.
+-->
+
+	<!-- A universally unique application identifier. Must be unique across all AIR applications.
+	     Using a reverse DNS-style name as the id is recommended. (Eg. com.example.ExampleApplication.) Required. -->
+	<id>com.somecompany.powertools.PowerToolsDesktopX.3.0.11</id>
+
+	<!-- Used as the filename for the application. Required. -->
+	<filename>PowerToolsDesktopX_3_0_11</filename>
+
+	<!-- The name that is displayed in the AIR application installer. 
+	     May have multiple values for each language. See samples or xsd schema file. Optional. -->
+	<name>PowerTools Desktop X 3.0.11.1 (R1)</name>
+	
+	<!-- An application version designator.  Must be three integers between 0-999 and separated by "." Required. -->
+	<versionNumber>3.0.11</versionNumber>
+	
+	<versionLabel>v3.0.11.1 (HEAD)</versionLabel>
+	
+	<supportedProfiles>extendedDesktop desktop</supportedProfiles> 
+
+	<!-- Description, displayed in the AIR application installer.
+	     May have multiple values for each language. See samples or xsd schema file. Optional. -->
+	<description>PowerTools Desktop X 3.0.11.1 (R1) Build: 0</description>
+
+	<!-- Copyright information. Optional -->
+	<copyright>2015 somecompany, Inc.</copyright>
+
+	<!-- Settings for the application's initial window. Required. -->
+	<initialWindow>
+		<!-- The main SWF or HTML file of the application. Required. -->
+		<!-- Note: In Flash Builder, the SWF reference is set automatically. -->
+		<content>PowerToolsDesktop.swf</content>
+		<title>PowerTools Desktop X</title>
+		<systemChrome>none</systemChrome>
+		<transparent>true</transparent>
+		<width>1024</width>
+		<height>700</height>
+		<x>20</x>
+		<y>20</y>
+		<autoOrients>false</autoOrients>
+        <fullScreen>false</fullScreen>
+        <visible>false</visible>
+	</initialWindow>
+
+	<icon>
+		<image16x16>/assets/air_icons/icon_016.png</image16x16>
+		<image32x32>/assets/air_icons/icon_032.png</image32x32>
+		<image48x48>/assets/air_icons/icon_048.png</image48x48>
+		<image128x128>/assets/air_icons/icon_128.png</image128x128>
+	</icon>
+
+</application>

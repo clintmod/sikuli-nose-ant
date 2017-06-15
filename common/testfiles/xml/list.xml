@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--*
+** THIS FILE IS MANAGED BY POWERTOOLS. MANUAL CHANGES WILL BE LOST! **
+   Managed By: PowerTools Desktop v3.0.10.0(R1) (Server v1.0.557)(Java Exported)
+   Managed For: Innovative Insurance Company (Head)
+   Export Date: 20150203 14:11:47
+   Exported By: [clint.modien@somecompany.com]
+   Export Code: [96106F2012984975B2A4FEEF701B8367]
+*-->
+<ProductList InheritMode="Merge">
+  <coderefs>
+    <coderef name="affinity-group">
+      <options key="all" InheritMode="Replace">
+        <option value="AAGIE" name="Apartment Association of Greater Inland Empire" />
+        <option value="AAGLA" name="Apartment Association of Greater Los Angeles" />
+        <option value="ABCOA" name="Affiliated Buyers Club America" />
+        <option value="ACCU1" name="Arrowhead Credit Union" />
+        <option value="ACSI1" name="Association of Christian Schools Intl." />
+        <option value="APSCU" name="California Accredited Private Schools College/University" />
+        <option value="APSKT" name="California Associated Private Schools K-12" />
+        <option value="AUAFF" name="Alliance United Affinity Group" />
+        <option value="BANDB" name="California Association of Bed and Breakfast Inns" />
+        <option value="BANK1" name="Pacific Coast Bankers Bank" />
+        <option value="BRAGG" name="Bragg Investment" />
+        <option value="CCSPE" name="California Society of Professional Engineers" />
+        <option value="CHEV1" name="Chevron Valley Credit Union" />
+        <option value="CHLOA" name="Countrywide Home Loans Inc" />
+        <option value="CMTCU" name="CMT Federal Credit Union" />
+        <option value="COLDW" name="Coldwell Banker Success Realty" />
+        <option value="CRFCU" name="Courts and Records Federal Credit Union" />
+        <option value="FICAG" name="FIC Agents Association" />
+        <option value="GSMOL" name="Golden State Manufactured-Homeowners League" />
+        <option value="HAECU" name="Hughes Aircraft Employee Federal Credit Union" />
+        <option value="HANMI" name="Hanmi Bank" />
+        <option value="HBCOC" name="Hermosa Beach Chamber of Commerce" />
+        <option value="JLSUL" name="John L Sullivan Group" />
+        <option value="KERN1" name="Kern Federal Credit Union" />
+        <option value="LAPCU" name="Los Angeles Police Federal Credit Union" />
+        <option value="MATCU" name="Matadors Federal Credit Union" />
+        <option value="NCITY" name="National City Corporation Customers" />
+        <option value="NGFCU" name="Northrup-Grumman Federal Credit Union" />
+        <option value="OCC01" name="Firefighters &amp; Law Enforcement" />
+        <option value="OCC02" name="Accountants, Teachers, etc." />
+        <option value="PAUSA" name="Pacific Coast US Track and Field" />
+        <option value="PEACH" name="Peachwood Medical Group" />
+        <option value="PUCEU" name="California PUC Energy Utilities" />
+        <option value="PUCTU" name="California PUC Telecomm Utilities" />
+        <option value="PUCWU" name="California PUC Water Utilities" />
+        <option value="RANS1" name="Ransom Financial Services, Inc." />
+        <option value="SAFE1" name="Safe 1 Credit Union" />
+        <option value="SAMSA" name="Sam's Club Arizona Franchises" />
+        <option value="SUNBK" name="Sun Country Bank" />
+        <option value="TCHAB" name="TCH/The Centers for Habitation" />
+        <option value="TLINK" name="Independent Ambulance Providers" />
+        <option value="TRICI" name="Tri-City Automotive Warehouse" />
+        <option value="USEIT" name="USEIT Federal Credit Union" />
+        <option value="WESTR" name="West USA Realty, Inc." />
+        <option value="00000" name="Test" />
+        <option value="04562" name="National City Chamber of Commerce" />
+        <option value="11180" name="Rancho Cordovoa Chamber of Commmerce" />
+        <option value="22143" name="Winter Fox Ski Associates" />
+        <option value="55639" name="Desert" />
+        <option value="94114" name="Walden" />
+      </options>
+    </coderef>
+    <coderef name="construction-type">
+      <options key="all" InheritMode="Replace">
+        <option value="Frame" name="Frame" />
+        <option value="Brick/Stone Veneer" name="Brick/Stone Veneer" />
+        <option value="Solid Masonry" name="Solid Masonry" />
+        <option value="Aluminum Siding" name="Aluminum Siding" />
+        <option value="Vinyl Siding" name="Vinyl Siding" />
+        <option value="Steel Siding" name="Steel Siding" />
+        <option value="Concrete Block" name="Concrete Block" />
+        <option value="Log" name="Log" />
+        <option value="Concrete Poured in Place" name="Concrete Poured in Place" />
+        <option value="Stucco on Frame" name="Stucco on Frame" />
+        <option value="Straw" name="Straw" />
+        <option value="Cardboard Box" name="Box" />
+      </options>
+    </coderef>
+    <coderef name="general">
+      <options key="promotions-code" InheritMode="Replace">
+        <option value="FIRE1" name="FIRE1" />
+        <option value="FIRE2" name="FIRE2" />
+      </options>
+      <options key="promotions-to-product" InheritMode="Replace">
+        <option value="None" name="NonCivilServant" />
+        <option value="FIRE1" name="Firefighter" />
+        <option value="FIRE2" name="Firefighter" />
+      </options>
+    </coderef>
+    <coderef name="roof-type">
+      <options key="all" InheritMode="Replace">
+        <option value="Woodshake" name="Woodshake" />
+        <option value="Shingle" name="Shingle" />
+        <option value="Asphalt" name="Asphalt" />
+        <option value="Concrete Tile" name="Concrete Tile" />
+        <option value="Tar and Gravel" name="Tar and Gravel" />
+        <option value="Palm Fronds" name="Palm Fronds" />
+      </options>
+    </coderef>
+  </coderefs>
+</ProductList>
+

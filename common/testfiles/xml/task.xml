@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--*
+** THIS FILE IS MANAGED BY POWERTOOLS. MANUAL CHANGES WILL BE LOST! **
+   Managed By: PowerTools Desktop 3.0.11.1 (R1) (Server v1.0.557)(Java Exported)
+   Managed For: Innovative Insurance Company (3.0.11.1)
+   Export Date: 20150611 13:21:39
+   Exported By: [clint.modien@somecompany.com]
+   Export Code: [FF4DDF6E25B62F5C2BD43C8F08076DB1]
+*-->
+<TaskTemplates>
+  <TaskTemplate id="1 ObtainPaintChip ID" CompleteCommentsRequiredInd="No" CompleteRequiredInd="No" CriticalDtBusinessInd="No" CriticalDtInd="No" CriticalDtOverrideInd="No" DefaultOwnerCd="User" DefaultOwnerOverrideInd="No" Description="Obtain Paint Chip Description" DescriptionOverrideInd="No" LockingTaskTransferInd="No" LockingTaskTransferOverrideInd="No" Name="1 Obtain Paint Chip Name" PriorityOverrideInd="No" ReminderDtBusinessInd="No" ReminderDtOverrideInd="No" ReminderInd="No" RepeatingInd="No" RepeatingOverrideInd="No" ReportToInd="No" ReportToOverrideInd="No" ShowOnInboxInd="Yes" TaskTypeCd="Manual" Text="1 Obtain Paint Chip Text" TextOverrideInd="No" WorkDtBusinessInd="No" WorkDtOverrideInd="No" WorkRequiredInd="Yes">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Change" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="Yes" />
+      <SecurityAttribute TypeCd="Complete" Value="Yes" />
+    </SecurityAttributes>
+  </TaskTemplate>
+  <TaskTemplate id="ExternalQuote2001" CompleteCommentsRequiredInd="No" CompleteRequiredInd="No" CriticalDtBusinessInd="No" CriticalDtDays="0" CriticalDtInd="No" CriticalDtOverrideInd="No" DeactivationDt="12/31/2999" DefaultOwner="UW" DefaultOwnerCd="Group" DefaultOwnerOverrideInd="No" Description="Quote $Application.gets('ApplicationNumber') in process for $InsuredName.gets('CommercialName')" DescriptionOverrideInd="No" LockingTaskTransferInd="No" LockingTaskTransferOverrideInd="No" Name="Automated Quote Assignment" Priority="1" PriorityOverrideInd="No" ReminderDtBusinessInd="No" ReminderDtDays="0" ReminderDtOverrideInd="No" ReminderInd="No" RepeatingInd="No" RepeatingOverrideInd="No" ReportToInd="No" ReportToOverrideInd="No" ShowOnInboxInd="No" TaskTypeCd="Automatic" Text="Quote $Application.gets('ApplicationNumber') in process for $InsuredName.gets('CommercialName')" TextOverrideInd="No" WorkDtBusinessInd="No" WorkDtDays="0" WorkDtOverrideInd="No" WorkRequiredInd="Yes">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Change" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="Yes" />
+      <SecurityAttribute TypeCd="Complete" Value="Yes" />
+    </SecurityAttributes>
+  </TaskTemplate>
+  <TaskTemplate id="QuoteTask2002" CompleteCommentsRequiredInd="No" CompleteRequiredInd="Yes" CriticalDtBusinessInd="No" CriticalDtInd="No" CriticalDtOverrideInd="Yes" DeactivationDt="12/31/2999" DefaultOwner="#set($Owner=&quot;UWClerk&quot;)#if($ProviderRenderer.getProviderNumber($Application.getBean(&quot;BasicPolicy&quot;).gets(&quot;ProviderRef&quot;))!=&quot;dpproducer&quot;)$ProviderRenderer.getProviderNumber($Application.getBean(&quot;BasicPolicy&quot;).gets(&quot;ProviderRef&quot;))#else$Owner#end" DefaultOwnerCd="Group" DefaultOwnerOverrideInd="Yes" Description="Please contact me to discuss my quote $!InsuredName.gets('CommercialName')" DescriptionOverrideInd="Yes" LockingTaskTransferInd="No" LockingTaskTransferOverrideInd="No" Name="Consumer Portal - Contact Me" Priority="1" PriorityOverrideInd="Yes" ReminderDtBusinessInd="No" ReminderDtOverrideInd="Yes" ReminderInd="No" RepeatingInd="No" RepeatingOverrideInd="Yes" ReportToInd="No" ReportToOverrideInd="Yes" ShowOnInboxInd="Yes" TaskTypeCd="Automatic" Text="Please contact me to discuss my quote." TextOverrideInd="Yes" WorkDtBusinessInd="No" WorkDtDays="0" WorkDtOverrideInd="Yes" WorkRequiredInd="Yes">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Change" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="Yes" />
+      <SecurityAttribute TypeCd="Complete" Value="Yes" />
+    </SecurityAttributes>
+    <TaskRule id="quote-task-process-cancel" RuleTypeCd="Service" Processor="velocity" RuleSource="UWRule::rule::none::quote-task-process-cancel.vtl" />
+  </TaskTemplate>
+  <TaskTemplate id="QuoteTask2003" CompleteCommentsRequiredInd="No" CompleteRequiredInd="Yes" CriticalDtBusinessInd="No" CriticalDtInd="No" CriticalDtOverrideInd="Yes" DeactivationDt="12/31/2999" DefaultOwnerCd="Group" DefaultOwnerOverrideInd="Yes" Description="The Consumer Portal was unable to process because of issues ($!InsuredName.gets('CommercialName'))" DescriptionOverrideInd="Yes" LockingTaskTransferInd="No" LockingTaskTransferOverrideInd="No" Name="Consumer Portal - Quote has Issues" Priority="1" PriorityOverrideInd="Yes" ReminderDtBusinessInd="No" ReminderDtOverrideInd="Yes" ReminderInd="No" RepeatingInd="No" RepeatingOverrideInd="Yes" ReportToInd="No" ReportToOverrideInd="Yes" ShowOnInboxInd="Yes" TaskTypeCd="Automatic" Text="The Consumer Portal was unable to process because of issues." TextOverrideInd="Yes" WorkDtBusinessInd="No" WorkDtDays="0" WorkDtOverrideInd="Yes" WorkRequiredInd="Yes">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Change" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="Yes" />
+      <SecurityAttribute TypeCd="Complete" Value="Yes" />
+    </SecurityAttributes>
+    <TaskRule id="quote-task-process-cancel" RuleTypeCd="Service" Processor="velocity" RuleSource="UWRule::rule::none::quote-task-process-cancel.vtl" />
+  </TaskTemplate>
+  <TaskTemplate id="QuoteTask0001" CompleteCommentsRequiredInd="No" CompleteRequiredInd="Yes" CriticalDtBusinessInd="No" CriticalDtInd="No" CriticalDtOverrideInd="Yes" DeactivationDt="12/31/2999" DefaultOwner="admin" DefaultOwnerCd="User" DefaultOwnerOverrideInd="Yes" Description="General Reminder For $!InsuredName.gets('CommercialName')" DescriptionOverrideInd="Yes" LockingTaskTransferInd="No" LockingTaskTransferOverrideInd="No" Name="General Reminder" Priority="5" PriorityOverrideInd="Yes" ReminderDtBusinessInd="No" ReminderDtOverrideInd="Yes" ReminderInd="No" RepeatingInd="No" RepeatingOverrideInd="No" ReportToInd="No" ReportToOverrideInd="Yes" ShowOnInboxInd="Yes" TaskTypeCd="Manual" Text="General Reminder for $!InsuredName.gets('CommercialName')" TextOverrideInd="Yes" WorkDtBusinessInd="No" WorkDtDays="0" WorkDtOverrideInd="Yes" WorkRequiredInd="Yes">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Change" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="Yes" />
+      <SecurityAttribute TypeCd="Complete" Value="Yes" />
+    </SecurityAttributes>
+  </TaskTemplate>
+  <TaskTemplate id="QuoteTask2004" CompleteCommentsRequiredInd="No" CompleteRequiredInd="Yes" CriticalDtBusinessInd="No" CriticalDtDays="70" CriticalDtInd="Yes" CriticalDtOverrideInd="No" DeactivationDt="12/31/2999" DefaultOwner="UW" DefaultOwnerCd="Group" DefaultOwnerOverrideInd="No" Description="New email attachment on Quote for $!InsuredName.gets('CommercialName')" DescriptionOverrideInd="No" LockingTaskTransferInd="No" LockingTaskTransferOverrideInd="No" Name="New Email Attachment on Quote" Priority="3" PriorityOverrideInd="Yes" ReminderDtBusinessInd="No" ReminderDtDays="99999" ReminderDtOverrideInd="No" ReminderInd="No" RepeatingInd="No" RepeatingOverrideInd="No" ReportToInd="No" ReportToOverrideInd="No" ShowOnInboxInd="Yes" TaskTypeCd="Automatic" Text="New email attachment on Quote for $!InsuredName.gets('CommercialName')" TextOverrideInd="No" WorkDtBusinessInd="No" WorkDtDays="0" WorkDtOverrideInd="No" WorkRequiredInd="Yes">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Change" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="Yes" />
+      <SecurityAttribute TypeCd="Complete" Value="Yes" />
+    </SecurityAttributes>
+  </TaskTemplate>
+  <TaskTemplate id="QuoteTask2001" CompleteCommentsRequiredInd="No" CompleteRequiredInd="No" CriticalDtBusinessInd="No" CriticalDtDays="0" CriticalDtInd="No" CriticalDtOverrideInd="No" DeactivationDt="12/31/2999" DefaultOwnerCd="User" DefaultOwnerOverrideInd="No" Description="Quote $Application.gets('ApplicationNumber') in process for $InsuredName.gets('CommercialName')" DescriptionOverrideInd="No" LockingTaskTransferInd="No" LockingTaskTransferOverrideInd="No" Name="Quote Assignment" Priority="1" PriorityOverrideInd="No" ReminderDtBusinessInd="No" ReminderDtDays="0" ReminderDtOverrideInd="No" ReminderInd="No" RepeatingInd="No" RepeatingOverrideInd="No" ReportToInd="No" ReportToOverrideInd="No" ShowOnInboxInd="No" TaskTypeCd="Automatic" Text="Quote $Application.gets('ApplicationNumber') in process for $InsuredName.gets('CommercialName')" TextOverrideInd="No" WorkDtBusinessInd="No" WorkDtDays="0" WorkDtOverrideInd="No" WorkRequiredInd="Yes">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Change" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="Yes" />
+      <SecurityAttribute TypeCd="Complete" Value="Yes" />
+    </SecurityAttributes>
+  </TaskTemplate>
+  <TaskTemplate id="QuoteTask0002" CompleteCommentsRequiredInd="No" CompleteRequiredInd="Yes" CriticalDtBusinessInd="No" CriticalDtInd="No" CriticalDtOverrideInd="Yes" DeactivationDt="12/31/2999" DefaultOwnerCd="User" DefaultOwnerOverrideInd="Yes" Description="Followup on Quote for $!InsuredName.gets('CommercialName')" DescriptionOverrideInd="Yes" LockingTaskTransferInd="No" LockingTaskTransferOverrideInd="No" Name="Quote Followup" Priority="4" PriorityOverrideInd="Yes" ReminderDtBusinessInd="No" ReminderDtOverrideInd="Yes" ReminderInd="No" RepeatingInd="No" RepeatingOverrideInd="Yes" ReportToInd="No" ReportToOverrideInd="Yes" ShowOnInboxInd="Yes" TaskTypeCd="Manual" Text="Followup on Quote for $!InsuredName.gets('CommercialName')" TextOverrideInd="Yes" WorkDtBusinessInd="No" WorkDtDays="5" WorkDtOverrideInd="Yes" WorkRequiredInd="Yes">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Change" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="Yes" />
+      <SecurityAttribute TypeCd="Complete" Value="Yes" />
+    </SecurityAttributes>
+    <TaskRule id="quote-task-process-delete" RuleTypeCd="Service" Processor="velocity" RuleSource="UWRule::rule::none::quote-task-process-delete.vtl" />
+    <TaskRule id="application-task-correspondence-delete" RuleTypeCd="Service" Processor="velocity" RuleSource="UWRule::rule::none::application-task-correspondence-delete.vtl">
+      <Param Name="TaskId1" Value="PA-Quotation" />
+    </TaskRule>
+  </TaskTemplate>
+</TaskTemplates>
+

@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<project name="sk-tasks" >
+	
+	<property name="project.root" location="../../../../" />
+	<property name="imports.dir" value="${project.root}/test/sikuli/ant"/>
+	<property name="tests.dir" value="${project.root}/test/sikuli"/>
+
+	<property name="sikuli.Debug" value="3" />
+	
+	<import file="core-tasks.xml" />
+	
+	<target name="sk-interactive" depends="" >
+		<exec executable="${sikuli.dir}/sikulix.cmd" failonerror="true">
+			<arg line="-i"/>
+		</exec>
+	</target>
+	
+	<target name="sk-single" depends="" 
+		description="Runs a single sikuli script. (e.g. ant sk-single -Dsikuli.single=cvstest.sikuli)">
+		<run-sk-script path="${tests.dir}/${sikuli.single}" />
+	</target>
+	
+	<target name="sk-run-all" depends="" >
+		<for param="dir">
+			<dirset dir="${tests.dir}" includes="*TestCase*"/>
+			<sequential>
+				<echo>@{dir}</echo>
+				<run-sk-script path="@{dir}" />
+			</sequential>
+		</for>
+	</target>
+	
+	<target name="test-sk-run-commands">
+		<run-commands commands="powertools.open()|powertools.close()"/>
+	</target>
+	
+	<target name="sk-run-commands" description="Runs a pipe delimited list of commands.
+(e.g. ant sk-run-commands -Dsikuli.commands=powertools.open()|powertools.close()">
+		<run-commands commands="${sikuli.commands}"/>
+	</target>
+	
+	<macrodef name="run-commands">
+		<attribute name="commands" />
+		<sequential>
+			<var name="commands.to.run" value="@{commands}"  />
+			<propertyregex property="commands.to.run" global="true"
+				input="${commands.to.run}" regexp="\|" replace="${line.separator}"
+				override="true"/>
+		 	<run-sk-script path="${tests.dir}/runcommands.sikuli">
+				<additional-args>
+					<arg line="--" />
+					<arg value="${commands.to.run}"/>
+				</additional-args>
+			</run-sk-script>
+		</sequential>
+	</macrodef>
+	
+	<macrodef name="run-sk-script" >
+		<attribute name="path" />
+		<element name="additional-args" optional="true"/>
+		<sequential>
+			<if><isset property="sikuli.Debug"/><then>
+				<property name="sikuli.Debug.arg" value="-Dsikuli.Debug=${sikuli.Debug}"/>
+			</then><else>
+				<property name="sikuli.Debug.arg" value=""/>
+			</else></if>
+			<antcall target="python-clean" />
+			<exec executable="java.exe" failonerror="true">
+		 		<arg line="-Xms64M -Xmx512M -Dfile.encoding=UTF-8 ${sikuli.Debug.arg}" />
+		 		<arg value="-Dsikuli.FromCommandLine" />
+		 		<arg line="-jar '${sikuli.dir}/sikulix.jar'" />
+				<arg line="-r @{path}"/>
+				<additional-args />
+		 	</exec>
+		</sequential>
+	</macrodef>
+	
+	<target name="python-clean" description="Delete's all compiled python files.">
+		<delete>
+			<fileset dir="${tests.dir}">
+				<include name="**/*.pyc"/>
+				<include name="**/*py.class"/>
+			</fileset>
+		</delete>
+	</target>
+	
+	<!-- ================================= 
+		  target: install-ffmpeg			  
+		 ================================= -->
+	<target name="ffmpeg-install" depends="" description="Installs ffmpeg at c:\tools\ffmpeg\bin and adds it to the PATH variable.">
+		<get src="https://dl.dropboxusercontent.com/u/20054635/forever/ffmpeg.exe" dest="c:\tools\ffmpeg\bin" verbose="true"/>
+		<echo>Updating the path to include ffmpeg bin directory</echo>
+		<exec executable="cmd.exe" failonerror="true">
+			<arg value='/C setx Path "c:\tools\ffmpeg\bin;%PATH%"'/>
+		</exec>
+		<var name="env.Path" value="c:\tools\ffmpeg\bin;%PATH%" />
+		<echo>New path value is ${env.Path}</echo>
+		<echo>Reboot of cmd prompt required to take effect or run: set PATH=%PATH%;c:\tools\ffmpeg\bin</echo>
+		<echo>... because windows is teh suk</echo>
+	</target>
+
+</project>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<import file="sikuli-tasks.xml" />
+	
+	<if><not><isset property="pt.cvs.default.subdir" /></not><then>
+		<property name="pt.cvs.default.subdir" value="${user.name}"/>
+	</then></if>
+	
+	<target name="pt-project-clone-delete-all" depends="" description="Removes the PowerTools projects from disk and cvs">
+		<run-commands commands="project_template.delete_all_clones()" />
+	</target>
+	
+	<target name="pt-project-create" depends="" 
+			description="Creates a new project from the demo template">
+		<run-commands commands="project.create()" />
+	</target>
+	
+	<target name="pt-project-open-or-create" depends="" 
+			description="Creates a new project if one is not already created">
+		<run-commands commands="project.open_or_create_or_join()" />
+	</target>
+	
+	<target name="pt-project-clone" 
+			description="Imports custDEMO to the test cvs repo and then checks it out to a new directory.">
+		<run-commands commands="project_template.clone()" />
+	</target>
+	
+	<target name="pt-project-create-sub-project" 
+			description="Creates a sub project based on the current project in ~\powertools_aft_config.json">
+		<run-commands commands="project_template.create_sub_project()" />
+	</target>
+	
+</project>

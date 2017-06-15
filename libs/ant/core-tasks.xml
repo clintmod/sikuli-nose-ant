@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+
+	<property environment="env" />
+	<property name="libs.dir" location="../../../libs"/>
+	<property name="lib.ant.dir" location="${libs.dir}/ant"/>
+	
+	<taskdef resource="net/sf/antcontrib/antlib.xml">
+		<classpath>
+			<pathelement location="${lib.ant.dir}/ant-contrib-1.0b3.jar" />
+		</classpath>
+	</taskdef>
+	
+	<if> <isset property="echo.props" />
+		<then><echoproperties/></then>
+	</if>
+	
+	<target name="echoprops">
+		<echoproperties />
+	</target>
+	
+	<target name="uptodate-test">
+		<check-if-uptodate  inputFile="libs/flivy/core-tasks.xml" outputProperty="asdf"/>
+	</target>
+	
+	<macrodef name="check-if-uptodate" >
+		<attribute name="inputFile" />
+		<attribute name="outputProperty" />
+		<attribute name="excludes" default="bin/**,docs/**,reports/**,bin-debug/**,*Version.properties" />
+		<sequential>
+			<uptodate property="@{outputProperty}" targetfile="@{inputFile}" >
+				<srcfiles dir="." excludes="@{excludes}" />
+			</uptodate>
+			<if><isset property="@{outputProperty}" /><then>
+				<echo>@{inputFile} is up to date when compared to all files excluding @{excludes}</echo>
+			</then><else>
+				<echo>@{inputFile} is not up to date when compared to all files excluding @{excludes}</echo>
+			</else></if>
+		</sequential>
+	</macrodef>
+	
+</project>

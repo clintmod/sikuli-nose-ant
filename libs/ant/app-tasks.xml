@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<property name="project.root" value="../../.." />
+	<property name="air.roaming.dir" location="${user.home}/AppData/Roaming" />
+	<property name="jenkins.url" value="http://jenkins.somecompany.net:8080" />
+	<property name="powertools.env" value="dev"/>
+	<property name="jenkins.upstream.project" value="PowerToolsDesktop-head" />
+	<xmlproperty file="${project.root}/src/PowerToolsDesktop-app.xml" prefix="powertools" collapseAttributes="true"/>
+	<property name="new.version.name" value="PowerToolsDesktop-${powertools.application.versionNumber}-${powertools.env}.exe" />
+	<propertyregex property="powertools.application.versionWithUnderscores" global="true"
+		input="${powertools.application.versionNumber}" regexp="\."
+		replace="_" override="true"/>
+	
+	<import file="sikuli-tasks.xml" />
+
+	<target name="pt-app-open" depends="" >
+		<run-commands commands="powertools.open()" />
+	</target>
+
+	<target name="pt-app-close" depends="" >
+		<run-commands commands="powertools.close()" />
+	</target>
+	
+	<target name="pt-app-configure-workspace"
+			description="Configures the workspace">
+		<input addproperty="workspace.username">What username?</input>
+		<input addproperty="workspace.password">What password?</input>
+		<run-commands commands="workspace.configure_if_required('${workspace.username}','${workspace.password}')" />
+	</target>
+	
+	<target name="pt-app-reinstall" depends="pt-app-close"
+		description="Downloads, uninstalls, then re-installs PowerTools">
+		<run-commands commands="installer.reinstall()" />
+	</target>
+	
+	<target name="pt-app-uninstall" depends="pt-app-close" description="Uninstalls powertools">
+		<run-commands commands="installer.uninstall()" />
+	</target>
+	
+	<target name="pt-app-stop-server" description="Stops the local innovation server">
+		<run-commands commands="installer.stop_server()" />
+	</target>
+	
+	<target name="pt-app-openx" depends="">
+		<run-commands commands="powertoolsx.open()" />
+	</target>
+
+	<target name="pt-app-closex" depends="">
+		<run-commands commands="powertoolsx.close()" />
+	</target>
+	
+	<target name="pt-app-reinstallx" depends="pt-app-closex"
+		description="Downloads, uninstalls, then re-installs PowerTools devx">
+		<run-commands commands="installerx.reinstall()" />
+	</target>
+	
+	<target name="pt-app-uninstallx" depends="pt-app-close-all" description="Uninstalls powertools devx">
+		<run-commands commands="installerx.uninstall()" />
+	</target>
+	
+	<target name="pt-app-delete-secret-folder" depends="pt-app-close-all" description="Deletes the secret foloder for powertools">
+		<run-commands commands="installer.delete_secret_folder()" />
+	</target>
+		
+	<target name="pt-app-delete-secret-folderx" depends="pt-app-close-all" description="Deletes the secret foloder for powertools devx">
+		<run-commands commands="installerx.delete_secret_folder()" />
+	</target>
+	
+	<target name="pt-app-close-all" description="Closes any open instance of PowerTools">
+		<exec executable="taskkill.exe" failonerror="false">
+			<arg line="/IM PowerTools*"/>
+		</exec>
+	</target>
+
+</project>

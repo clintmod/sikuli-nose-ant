@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<property environment="env"/>
+	<property name="project.root" value="../../.." />
+	<property name="cvs.server" value="sj1-qa02.somecompany.net" />
+	
+	<target name="cvs-setup" depends="cygwin-setup, ssh-configure, ssh-test"
+		description="Setup cvs, cygwin and ssh and test the ssh connection">
+		
+	</target>
+	
+	<target name="cygwin-setup" depends="cygwin-check, cygwin-install, cygwin-set-home" />
+	
+	<target name="cygwin-check">
+		<available file="${env.CYGWIN_HOME}\bin\cvs.exe" property="cygwin.installed" />
+		<echo>cygwin.installed = ${cygwin.installed}</echo>
+	</target>
+	
+	<target name="cygwin-install" depends="" unless="cygwin.installed"> 
+		<get src="https://dl.dropboxusercontent.com/u/20054635/somecompany/cygwin.zip" dest="${java.io.tmpdir}" verbose="true"/>
+		<unzip src="${java.io.tmpdir}\cygwin.zip" dest="c:\cygwin" />
+		
+	</target>
+	
+	<target name="cygwin-set-home">
+		<echo>Setting permanent user environment variable CYGWIN_HOME to c:\cygwin</echo>
+		<exec executable="cmd.exe" failonerror="true">
+			<arg line='/C setx CYGWIN_HOME c:\cygwin'/>
+		</exec>
+		<echo>Updating the path to include cygwin bin directory</echo>
+		<exec executable="cmd.exe" failonerror="true">
+			<arg value='/C setx Path "c:\cygwin\bin;%PATH%"'/>
+		</exec>
+		<var name="env.Path" value="c:\cygwin\bin;%PATH%" />
+		<echo>New path value is ${env.Path}</echo>
+		<var name="env.CYGWIN_HOME" value="c:\cygwin" />
+		<echo>env.CYGWIN_HOME = ${env.CYGWIN_HOME}</echo>
+	</target>
+	
+	<target name="ssh-config-check">
+		<loadfile property="ssh.config.file.contents"
+			failonerror="false"
+			srcFile="${env.CYGWIN_HOME}/home/${user.name}/.ssh/config"/>
+		
+		<propertyregex property="ssh.config.already.has.host.info"
+				input="${ssh.config.file.contents}" regexp="Host ${cvs.server}"
+				select="\0" override="true"/>
+		<echo message="ssh.config.has.host.info = ${ssh.config.already.has.host.info}" />
+	</target>
+	
+	<target name="ssh-config-append" depends="ssh-config-check" unless="ssh.config.already.has.host.info">
+		<echo file="${env.CYGWIN_HOME}/home/${user.name}/.ssh/config" force="true">
+
+Host ${cvs.server}
+	Hostname ${cvs.server}
+	User ptcvsuser1
+	IdentityFile ~/.ssh/spibuild02
+	StrictHostKeyChecking no
+	UserKnownHostsFile=/dev/null
+	BatchMode yes
+
+		</echo>
+	</target>
+
+	
+	<target name="ssh-configure" depends="ssh-config-append">
+		<echo>Deploying ssh keys for the test cvs server...</echo>
+		<mkdir dir="${env.CYGWIN_HOME}/home/${user.name}/.ssh/"/>
+		
+		<copy todir="${env.CYGWIN_HOME}/home/${user.name}/.ssh/" flatten="true">
+			<resources>
+				<file file="${project.root}/test/sikuli/common/testfiles/spibuild02"/>
+				<file file="${project.root}/test/sikuli/common/testfiles/spibuild02.pub"/>
+			</resources>
+		</copy>
+		
+		<echo>Setting CVS_RSH environment variable to ssh</echo>
+		<exec executable="cmd.exe" failonerror="true">
+			<arg value='/C setx CVS_RSH ssh'/>
+		</exec>
+		<echo>Setting permissions on ssh config file</echo>
+		<exec executable="setfacl" failonerror="true">
+			<arg line="-b ~/.ssh/config" />
+		</exec>
+		<exec executable="chown" failonerror="true">
+			<arg line="-v ${user.name} ~/.ssh/config" />
+		</exec>
+		<exec executable="chmod" failonerror="true">
+			<arg line="-v 600 ~/.ssh/config" />
+		</exec>
+		
+		<exec executable="ls" failonerror="true">
+			<arg line="-la ~/.ssh/" />
+		</exec>
+		<echo>SSH config complete</echo>
+	</target>
+	
+	<target name="ssh-test" description="Tests the ssh connection to the test cvs server">
+		<exec executable="ssh" failonerror="true">
+			<arg line="-T -vvv ${cvs.server} echo 'Connected successfully'; exit"/>
+		</exec>
+	</target>
+
+</project>

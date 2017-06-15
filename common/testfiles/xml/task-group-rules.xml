@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TaskGroupRules>
+	<TaskGroupRule id="Underwriting" Name="" PackageName="Underwriting" TaskGroupResolver="">
+		<TaskGroupPackages>
+			<TaskGroupPackage Name="COUser"/>
+    		<TaskGroupPackage Name="INCustomer"/>
+			<TaskGroupPackage Name="WF"/>
+			<TaskGroupPackage Name="UWQuote"/>
+			<TaskGroupPackage Name="UWApplication"/>
+			<TaskGroupPackage Name="UWPolicy"/>
+		</TaskGroupPackages>
+	</TaskGroupRule>
+	<TaskGroupRule id="Claims" Name="" PackageName="Claims" TaskGroupResolver="">
+		<TaskGroupPackages>
+			<TaskGroupPackage Name="COUser"/>
+    		<TaskGroupPackage Name="INCustomer"/>
+			<TaskGroupPackage Name="WF"/>
+			<TaskGroupPackage Name="CLClaim"/>
+			<TaskGroupPackage Name="CLNotice"/>
+			<TaskGroupPackage Name="CLTransaction"/>
+		</TaskGroupPackages>
+	</TaskGroupRule>
+	<TaskGroupRule id="Common" Name="" PackageName="Common" TaskGroupResolver="">
+		<TaskGroupPackages>
+			<TaskGroupPackage Name="COUser"/>
+			<TaskGroupPackage Name="WF"/>
+		</TaskGroupPackages>
+	</TaskGroupRule>
+	<TaskGroupRule id="UnderwritingProducer" Name="Producer" PackageName="Underwriting" TaskGroupResolver="com.somecompany.uw.policy.PolicyTask">
+		<TaskGroupPackages>
+			<TaskGroupPackage Name="WF"/>
+			<TaskGroupPackage Name="UWQuote"/>
+			<TaskGroupPackage Name="UWApplication"/>
+			<TaskGroupPackage Name="UWPolicy"/>
+		</TaskGroupPackages>
+	</TaskGroupRule>
+	<TaskGroupRule id="ClaimsProvider" Name="Provider" PackageName="Claims" TaskGroupResolver="com.somecompany.claims.claim.ClaimTask">
+		<TaskGroupPackages>
+			<TaskGroupPackage Name="WF"/>
+    		<TaskGroupPackage Name="CLClaim"/>
+    		<TaskGroupPackage Name="CLNotice"/>
+    		<TaskGroupPackage Name="CLTransaction"/>
+    	</TaskGroupPackages>	
+	</TaskGroupRule>
+	<TaskGroupRule id="ClaimsProducer" Name="Producer" PackageName="Claims" TaskGroupResolver="com.somecompany.claims.claim.ClaimTask">
+		<TaskGroupPackages>
+			<TaskGroupPackage Name="WF"/>
+    		<TaskGroupPackage Name="CLClaim"/>
+    		<TaskGroupPackage Name="CLNotice"/>
+    		<TaskGroupPackage Name="CLTransaction"/>
+    	</TaskGroupPackages>	
+	</TaskGroupRule>
+</TaskGroupRules>	

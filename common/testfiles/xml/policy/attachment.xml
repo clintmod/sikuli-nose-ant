@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--*
+** THIS FILE IS MANAGED BY POWERTOOLS. MANUAL CHANGES WILL BE LOST! **
+   Managed By: PowerTools Desktop 3.0.11.1 (R1) (Server v1.0.557)(Java Exported)
+   Managed For: Innovative Insurance Company (3.0.11.2)
+   Export Date: 20150817 16:20:41
+   Exported By: [clint.modien@somecompany.com]
+   Export Code: [29DAA0D99BD29F28E1AFBFD71F56B2E9]
+*-->
+<AttachmentTemplates>
+  <AttachmentTemplate id="PLMLPolicyAttachment0006" AttachmentPointRequiredInd="No" CategoryCd="General" ConvertToPDFInd="Yes" DeactivationDt="12/31/2999" Description="Advertising / Promotional Material" Name="Advertising / Promotional Material">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="Edit" Value="Yes" />
+      <SecurityAttribute TypeCd="EditAttachment" Value="Yes" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="Yes" />
+      <SecurityAttribute TypeCd="Copy" Value="Yes" />
+      <SecurityAttribute TypeCd="Move" Value="Yes" />
+      <SecurityAttribute TypeCd="Annotate" Value="Yes" />
+    </SecurityAttributes>
+    <TagTemplate id="Correspondence" Name="Correspondence" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Miscellaneous" Name="Miscellaneous" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Records" Name="Records" AttachmentMethodCd="Optional" />
+  </AttachmentTemplate>
+  <AttachmentTemplate id="MPolicyAttachment0014" AttachmentPointRequiredInd="No" ConvertToPDFInd="Yes" DeactivationDt="12/31/2999" Description="Archived Attachment for $!InsuredName.gets('CommercialName')" Name="Archived">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="No" />
+      <SecurityAttribute TypeCd="Edit" Value="Yes" />
+      <SecurityAttribute TypeCd="EditAttachment" Value="Yes" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="Yes" />
+      <SecurityAttribute TypeCd="Copy" Value="Yes" />
+      <SecurityAttribute TypeCd="Move" Value="Yes" />
+      <SecurityAttribute TypeCd="Annotate" Value="Yes" />
+    </SecurityAttributes>
+  </AttachmentTemplate>
+  <AttachmentTemplate id="XPolicyAttachment0012" AttachmentPointRequiredInd="No" CategoryCd="General" ConvertToPDFInd="Yes" DeactivationDt="12/31/2999" Description="Correspondence from Insured for $!InsuredName.gets('CommercialName')" Name="Correspondence from Insured" TaskTemplateIdRef="PolicyTask2014">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="Edit" Value="Yes" />
+      <SecurityAttribute TypeCd="EditAttachment" Value="No" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="Yes" />
+      <SecurityAttribute TypeCd="Copy" Value="Yes" />
+      <SecurityAttribute TypeCd="Move" Value="Yes" />
+      <SecurityAttribute TypeCd="Annotate" Value="Yes" />
+    </SecurityAttributes>
+    <TagTemplate id="Correspondence" Name="Correspondence" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Miscellaneous" Name="Miscellaneous" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Records" Name="Records" AttachmentMethodCd="Optional" />
+  </AttachmentTemplate>
+  <AttachmentTemplate id="PLMLPolicyAttachment0009" AttachmentPointRequiredInd="No" CategoryCd="General" ConvertToPDFInd="Yes" DeactivationDt="12/31/2999" Description="Debt Collection Letters" Name="Debt Collection Letters">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="Edit" Value="Yes" />
+      <SecurityAttribute TypeCd="EditAttachment" Value="No" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="No" />
+      <SecurityAttribute TypeCd="Copy" Value="Yes" />
+      <SecurityAttribute TypeCd="Move" Value="No" />
+      <SecurityAttribute TypeCd="Annotate" Value="Yes" />
+    </SecurityAttributes>
+    <TagTemplate id="Correspondence" Name="Correspondence" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Miscellaneous" Name="Miscellaneous" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Records" Name="Records" AttachmentMethodCd="Optional" />
+  </AttachmentTemplate>
+  <AttachmentTemplate id="APolicyAttachment0006" AttachmentPointRequiredInd="No" CategoryCd="General" ConvertToPDFInd="Yes" DeactivationDt="12/31/2999" Description="Defensive Driver Certificate for $!InsuredName.gets('CommercialName')" Name="Defensive Driver Certificate">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="Edit" Value="Yes" />
+      <SecurityAttribute TypeCd="EditAttachment" Value="No" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="Yes" />
+      <SecurityAttribute TypeCd="Copy" Value="Yes" />
+      <SecurityAttribute TypeCd="Move" Value="Yes" />
+      <SecurityAttribute TypeCd="Annotate" Value="Yes" />
+    </SecurityAttributes>
+    <TagTemplate id="Miscellaneous" Name="Miscellaneous" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Records" Name="Records" AttachmentMethodCd="Optional" />
+    <TagTemplate id="ReportsExpert" Name="Reports / Expert" AttachmentMethodCd="Optional" />
+    <TagTemplate id="ReportsOfficial" Name="Reports / Official" AttachmentMethodCd="Optional" />
+  </AttachmentTemplate>
+  <AttachmentTemplate id="APolicyAttachment0007" AttachmentPointRequiredInd="No" CategoryCd="General" Comments="Valid Drivers License Received" ConvertToPDFInd="Yes" DeactivationDt="12/31/2999" Description="Driver License for $!InsuredName.gets('CommercialName')" Name="Driver License Copy">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="Edit" Value="Yes" />
+      <SecurityAttribute TypeCd="EditAttachment" Value="No" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="No" />
+      <SecurityAttribute TypeCd="Copy" Value="Yes" />
+      <SecurityAttribute TypeCd="Move" Value="No" />
+      <SecurityAttribute TypeCd="Annotate" Value="Yes" />
+    </SecurityAttributes>
+    <TagTemplate id="Miscellaneous" Name="Miscellaneous" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Records" Name="Records" AttachmentMethodCd="Optional" />
+    <TagTemplate id="ReportsExpert" Name="Reports / Expert" AttachmentMethodCd="Optional" />
+    <TagTemplate id="ReportsOfficial" Name="Reports / Official" AttachmentMethodCd="Optional" />
+  </AttachmentTemplate>
+  <AttachmentTemplate id="PLMLPolicyAttachment0002" AttachmentPointRequiredInd="No" CategoryCd="General" ConvertToPDFInd="Yes" DeactivationDt="12/31/2999" Description="Expiring Declaration Page for $!InsuredName.gets('CommercialName')" Name="Expiring Declaration Page">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="Edit" Value="Yes" />
+      <SecurityAttribute TypeCd="EditAttachment" Value="No" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="No" />
+      <SecurityAttribute TypeCd="Copy" Value="Yes" />
+      <SecurityAttribute TypeCd="Move" Value="No" />
+      <SecurityAttribute TypeCd="Annotate" Value="Yes" />
+    </SecurityAttributes>
+    <TagTemplate id="Correspondence" Name="Correspondence" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Miscellaneous" Name="Miscellaneous" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Records" Name="Records" AttachmentMethodCd="Optional" />
+  </AttachmentTemplate>
+  <AttachmentTemplate id="PLMLPolicyAttachment0004" AttachmentPointRequiredInd="No" CategoryCd="General" ConvertToPDFInd="Yes" DeactivationDt="12/31/2999" Description="Financial Statement for $!InsuredName.gets('CommercialName')" Name="Financial Statement - Applicant">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="Edit" Value="Yes" />
+      <SecurityAttribute TypeCd="EditAttachment" Value="No" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="No" />
+      <SecurityAttribute TypeCd="Copy" Value="Yes" />
+      <SecurityAttribute TypeCd="Move" Value="No" />
+      <SecurityAttribute TypeCd="Annotate" Value="Yes" />
+    </SecurityAttributes>
+    <TagTemplate id="Correspondence" Name="Correspondence" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Miscellaneous" Name="Miscellaneous" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Records" Name="Records" AttachmentMethodCd="Optional" />
+  </AttachmentTemplate>
+  <AttachmentTemplate id="PLMLPolicyAttachment0005" AttachmentPointRequiredInd="No" CategoryCd="General" ConvertToPDFInd="Yes" DeactivationDt="12/31/2999" Description="Financial Statement for" Name="Financial Statement - Other">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="Edit" Value="Yes" />
+      <SecurityAttribute TypeCd="EditAttachment" Value="No" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="No" />
+      <SecurityAttribute TypeCd="Copy" Value="Yes" />
+      <SecurityAttribute TypeCd="Move" Value="No" />
+      <SecurityAttribute TypeCd="Annotate" Value="Yes" />
+    </SecurityAttributes>
+    <TagTemplate id="Correspondence" Name="Correspondence" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Miscellaneous" Name="Miscellaneous" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Records" Name="Records" AttachmentMethodCd="Optional" />
+  </AttachmentTemplate>
+  <AttachmentTemplate id="MPolicyAttachment0015" AttachmentPointRequiredInd="No" ConvertToPDFInd="Yes" DeactivationDt="12/31/2999" Description="Attachment included with task for $!InsuredName.gets('CommercialName')" Name="IncludeWithTask">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="Edit" Value="Yes" />
+      <SecurityAttribute TypeCd="EditAttachment" Value="Yes" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="Yes" />
+      <SecurityAttribute TypeCd="Copy" Value="Yes" />
+      <SecurityAttribute TypeCd="Move" Value="Yes" />
+      <SecurityAttribute TypeCd="Annotate" Value="Yes" />
+    </SecurityAttributes>
+  </AttachmentTemplate>
+  <AttachmentTemplate id="PPolicyAttachment0003" AttachmentPointRequiredInd="Yes" CategoryCd="General" ConvertToPDFInd="Yes" DeactivationDt="12/31/2999" Description="Inspection Information for $!InsuredName.gets('CommercialName')" Name="Inspection Information">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="Edit" Value="Yes" />
+      <SecurityAttribute TypeCd="EditAttachment" Value="Yes" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="Yes" />
+      <SecurityAttribute TypeCd="Copy" Value="Yes" />
+      <SecurityAttribute TypeCd="Move" Value="Yes" />
+      <SecurityAttribute TypeCd="Annotate" Value="Yes" />
+    </SecurityAttributes>
+    <TagTemplate id="InspectionPhoto" Name="Inspection / Photo" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Miscellaneous" Name="Miscellaneous" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Records" Name="Records" AttachmentMethodCd="Optional" />
+    <TagTemplate id="ReportsExpert" Name="Reports / Expert" AttachmentMethodCd="Optional" />
+    <TagTemplate id="ReportsOfficial" Name="Reports / Official" AttachmentMethodCd="Optional" />
+  </AttachmentTemplate>
+  <AttachmentTemplate id="XPolicyAttachment0009" AttachmentPointRequiredInd="No" CategoryCd="General" ConvertToPDFInd="Yes" DeactivationDt="12/31/2999" Description="Insured Cancelation Request for $!InsuredName.gets('CommercialName')" Name="Insured Cancelation Request">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="Edit" Value="Yes" />
+      <SecurityAttribute TypeCd="EditAttachment" Value="No" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="No" />
+      <SecurityAttribute TypeCd="Copy" Value="Yes" />
+      <SecurityAttribute TypeCd="Move" Value="Yes" />
+      <SecurityAttribute TypeCd="Annotate" Value="Yes" />
+    </SecurityAttributes>
+    <TagTemplate id="Correspondence" Name="Correspondence" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Miscellaneous" Name="Miscellaneous" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Records" Name="Records" AttachmentMethodCd="Optional" />
+  </AttachmentTemplate>
+  <AttachmentTemplate id="XPolicyAttachment0011" AttachmentPointRequiredInd="No" CategoryCd="Reports" ConvertToPDFInd="Yes" DeactivationDt="12/31/2999" Description="Loss History for $!InsuredName.gets('CommercialName')" Name="Loss History">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="Edit" Value="Yes" />
+      <SecurityAttribute TypeCd="EditAttachment" Value="No" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="Yes" />
+      <SecurityAttribute TypeCd="Copy" Value="Yes" />
+      <SecurityAttribute TypeCd="Move" Value="Yes" />
+      <SecurityAttribute TypeCd="Annotate" Value="LossHistoryAttachment-Annotate" />
+    </SecurityAttributes>
+    <TagTemplate id="Correspondence" Name="Correspondence" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Miscellaneous" Name="Miscellaneous" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Records" Name="Records" AttachmentMethodCd="Optional" />
+  </AttachmentTemplate>
+  <AttachmentTemplate id="MPolicyAttachment0010" AttachmentPointRequiredInd="No" CategoryCd="General" ConvertToPDFInd="Yes" DeactivationDt="12/31/2999" Description="Miscellaneous Attachment for $!InsuredName.gets('CommercialName')" Name="Miscellaneous" TaskTemplateIdRef="PolicyTask2032">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="Edit" Value="Yes" />
+      <SecurityAttribute TypeCd="EditAttachment" Value="Yes" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="Yes" />
+      <SecurityAttribute TypeCd="Copy" Value="Yes" />
+      <SecurityAttribute TypeCd="Move" Value="Yes" />
+      <SecurityAttribute TypeCd="Annotate" Value="Yes" />
+    </SecurityAttributes>
+    <TagTemplate id="Correspondence" Name="Correspondence" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Miscellaneous" Name="Miscellaneous" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Records" Name="Records" AttachmentMethodCd="Optional" />
+  </AttachmentTemplate>
+  <AttachmentTemplate id="Xunderwriting00064" AttachmentPointRequiredInd="No" Comments="Pait chip" ConvertToPDFInd="Yes" Description="Pant chip attachment" Name="Paint Chip">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="Edit" Value="Yes" />
+      <SecurityAttribute TypeCd="EditAttachment" Value="No" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="No" />
+      <SecurityAttribute TypeCd="Copy" Value="Yes" />
+      <SecurityAttribute TypeCd="Move" Value="No" />
+      <SecurityAttribute TypeCd="Annotate" Value="Yes" />
+    </SecurityAttributes>
+    <TagTemplate id="Quote" Name="Quote" AttachmentMethodCd="Default" />
+  </AttachmentTemplate>
+  <AttachmentTemplate id="XPolicyAttachment0001" AttachmentPointRequiredInd="No" CategoryCd="General" ConvertToPDFInd="Yes" DeactivationDt="12/31/2999" Description="Paper Application for $!InsuredName.gets('CommercialName')" Name="Paper Application">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="Edit" Value="Yes" />
+      <SecurityAttribute TypeCd="EditAttachment" Value="Yes" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="Yes" />
+      <SecurityAttribute TypeCd="Copy" Value="Yes" />
+      <SecurityAttribute TypeCd="Move" Value="Yes" />
+      <SecurityAttribute TypeCd="Annotate" Value="Yes" />
+    </SecurityAttributes>
+    <TagTemplate id="Correspondence" Name="Correspondence" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Miscellaneous" Name="Miscellaneous" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Records" Name="Records" AttachmentMethodCd="Optional" />
+  </AttachmentTemplate>
+  <AttachmentTemplate id="XPolicyAttachment0002" AttachmentPointRequiredInd="No" CategoryCd="General" ConvertToPDFInd="Yes" DeactivationDt="12/31/2999" Description="Photos for $!InsuredName.gets('CommercialName')" Name="Photos">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="Edit" Value="Yes" />
+      <SecurityAttribute TypeCd="EditAttachment" Value="Yes" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="Yes" />
+      <SecurityAttribute TypeCd="Copy" Value="Yes" />
+      <SecurityAttribute TypeCd="Move" Value="Yes" />
+      <SecurityAttribute TypeCd="Annotate" Value="Yes" />
+    </SecurityAttributes>
+    <TagTemplate id="InspectionPhoto" Name="Inspection / Photo" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Miscellaneous" Name="Miscellaneous" AttachmentMethodCd="Optional" />
+  </AttachmentTemplate>
+  <AttachmentTemplate id="PLMLPolicyAttachment0001" AttachmentPointRequiredInd="No" CategoryCd="General" ConvertToPDFInd="Yes" DeactivationDt="12/31/2999" Description="Miscellaneous Attachment for $!InsuredName.gets('CommercialName')" Name="PLML Miscellaneous">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="Edit" Value="Yes" />
+      <SecurityAttribute TypeCd="EditAttachment" Value="Yes" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="Yes" />
+      <SecurityAttribute TypeCd="Copy" Value="Yes" />
+      <SecurityAttribute TypeCd="Move" Value="Yes" />
+      <SecurityAttribute TypeCd="Annotate" Value="Yes" />
+    </SecurityAttributes>
+    <TagTemplate id="Correspondence" Name="Correspondence" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Miscellaneous" Name="Miscellaneous" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Records" Name="Records" AttachmentMethodCd="Optional" />
+  </AttachmentTemplate>
+  <AttachmentTemplate id="XPolicyAttachment0004" AttachmentPointRequiredInd="No" CategoryCd="General" ConvertToPDFInd="Yes" DeactivationDt="12/31/2999" Description="Proof of Prior Insurance for $!InsuredName.gets('CommercialName')" Name="Proof of Prior Insurance">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="Edit" Value="Yes" />
+      <SecurityAttribute TypeCd="EditAttachment" Value="No" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="Yes" />
+      <SecurityAttribute TypeCd="Copy" Value="Yes" />
+      <SecurityAttribute TypeCd="Move" Value="Yes" />
+      <SecurityAttribute TypeCd="Annotate" Value="Yes" />
+    </SecurityAttributes>
+    <TagTemplate id="Miscellaneous" Name="Miscellaneous" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Records" Name="Records" AttachmentMethodCd="Optional" />
+    <TagTemplate id="ReportsExpert" Name="Reports / Expert" AttachmentMethodCd="Optional" />
+    <TagTemplate id="ReportsOfficial" Name="Reports / Official" AttachmentMethodCd="Optional" />
+  </AttachmentTemplate>
+  <AttachmentTemplate id="APolicyAttachment0005" AttachmentPointRequiredInd="No" CategoryCd="General" ConvertToPDFInd="Yes" DeactivationDt="12/31/2999" Description="Restricted Driver Form for $!InsuredName.gets('CommercialName')" Name="Restricted Driver Form">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="Edit" Value="Yes" />
+      <SecurityAttribute TypeCd="EditAttachment" Value="No" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="Yes" />
+      <SecurityAttribute TypeCd="Copy" Value="Yes" />
+      <SecurityAttribute TypeCd="Move" Value="Yes" />
+      <SecurityAttribute TypeCd="Annotate" Value="Yes" />
+    </SecurityAttributes>
+    <TagTemplate id="Miscellaneous" Name="Miscellaneous" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Records" Name="Records" AttachmentMethodCd="Optional" />
+    <TagTemplate id="ReportsExpert" Name="Reports / Expert" AttachmentMethodCd="Optional" />
+    <TagTemplate id="ReportsOfficial" Name="Reports / Official" AttachmentMethodCd="Optional" />
+  </AttachmentTemplate>
+  <AttachmentTemplate id="PLMLPolicyAttachment0003" AttachmentPointRequiredInd="No" CategoryCd="General" ConvertToPDFInd="Yes" DeactivationDt="12/31/2999" Description="Resume for $!InsuredName.gets('CommercialName')" Name="Resume">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="Edit" Value="Yes" />
+      <SecurityAttribute TypeCd="EditAttachment" Value="No" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="No" />
+      <SecurityAttribute TypeCd="Copy" Value="Yes" />
+      <SecurityAttribute TypeCd="Move" Value="No" />
+      <SecurityAttribute TypeCd="Annotate" Value="Yes" />
+    </SecurityAttributes>
+    <TagTemplate id="Correspondence" Name="Correspondence" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Miscellaneous" Name="Miscellaneous" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Records" Name="Records" AttachmentMethodCd="Optional" />
+  </AttachmentTemplate>
+  <AttachmentTemplate id="PPolicyAttachment0008" AttachmentPointRequiredInd="No" CategoryCd="General" ConvertToPDFInd="Yes" DeactivationDt="12/31/2999" Description="Roof Replacement Proof for $!InsuredName.gets('CommercialName')" Name="Roof Replacement Proof">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="Edit" Value="Yes" />
+      <SecurityAttribute TypeCd="EditAttachment" Value="Yes" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="Yes" />
+      <SecurityAttribute TypeCd="Copy" Value="Yes" />
+      <SecurityAttribute TypeCd="Move" Value="Yes" />
+      <SecurityAttribute TypeCd="Annotate" Value="Yes" />
+    </SecurityAttributes>
+    <TagTemplate id="Miscellaneous" Name="Miscellaneous" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Records" Name="Records" AttachmentMethodCd="Optional" />
+    <TagTemplate id="ReportsExpert" Name="Reports / Expert" AttachmentMethodCd="Optional" />
+    <TagTemplate id="ReportsOfficial" Name="Reports / Official" AttachmentMethodCd="Optional" />
+  </AttachmentTemplate>
+  <AttachmentTemplate id="PLMLPolicyAttachment0008" AttachmentPointRequiredInd="No" CategoryCd="General" ConvertToPDFInd="Yes" DeactivationDt="12/31/2999" Description="Standard Sales / Service / License Agreement" Name="Standard Sales / Service / License Agreement">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="Yes" />
+      <SecurityAttribute TypeCd="Edit" Value="Yes" />
+      <SecurityAttribute TypeCd="EditAttachment" Value="No" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="No" />
+      <SecurityAttribute TypeCd="Copy" Value="Yes" />
+      <SecurityAttribute TypeCd="Move" Value="No" />
+      <SecurityAttribute TypeCd="Annotate" Value="Yes" />
+    </SecurityAttributes>
+    <TagTemplate id="Correspondence" Name="Correspondence" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Miscellaneous" Name="Miscellaneous" AttachmentMethodCd="Optional" />
+    <TagTemplate id="Records" Name="Records" AttachmentMethodCd="Optional" />
+  </AttachmentTemplate>
+  <AttachmentTemplate id="MPolicyAttachment0013" AttachmentPointRequiredInd="No" ConvertToPDFInd="Yes" DeactivationDt="12/31/2999" Description="Unfiled Attachment for $!InsuredName.gets('CommercialName')" Name="Unfiled" TaskTemplateIdRef="PolicyTask2032">
+    <SecurityAttributes>
+      <SecurityAttribute TypeCd="Add" Value="No" />
+      <SecurityAttribute TypeCd="Edit" Value="Yes" />
+      <SecurityAttribute TypeCd="EditAttachment" Value="No" />
+      <SecurityAttribute TypeCd="View" Value="Yes" />
+      <SecurityAttribute TypeCd="Delete" Value="Yes" />
+      <SecurityAttribute TypeCd="Copy" Value="Yes" />
+      <SecurityAttribute TypeCd="Move" Value="Yes" />
+      <SecurityAttribute TypeCd="Annotate" Value="Yes" />
+    </SecurityAttributes>
+  </AttachmentTemplate>
+</AttachmentTemplates>
+

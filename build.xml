@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="PowerToolsDesktop-Sikuli" basedir=".">
+	<description>
+		Ant file for executing Sikuli scripts against PowerTools
+	</description>
+	<property file="overrides.properties" />
+	<property environment="env" />
+	<property name="project.root" location="../.." />
+	<property name="aft.reports.dir" location="${project.root}/reports/aft" />
+	<property name="aft.tests.dir" location="${project.root}/test/sikuli"/>
+	<property name="libs.dir" location="${project.root}/libs"/>
+	<property name="imports.dir" location="${aft.tests.dir}/libs/ant"/>
+	<property name="sikuli.dir" location="${libs.dir}/sikuli/1.1.0"/>
+	
+	<import file="${imports.dir}/core-tasks.xml" />
+	<import file="${imports.dir}/cvs-tasks.xml" />
+	<import file="${imports.dir}/app-tasks.xml" />
+	<import file="${imports.dir}/project-tasks.xml" />
+	<import file="${imports.dir}/sikuli-tasks.xml" />
+
+	<target name="test-aft-smoke" depends="pt-clean-screen-captures" description="Runs a feature smoke test on PowerTools">
+		<run-sk-script path="${aft.tests.dir}/smoketest.sikuli" />
+	</target>
+	
+	<target name="test-aft-cvs" depends="pt-clean-screen-captures" description="Runs a cvs based test on PowerTools">
+		<run-sk-script path="${aft.tests.dir}/cvstest.sikuli" />
+	</target>
+
+	<!-- ================================= 
+		  target: jenkins-aft			  
+		 ================================= -->
+	<target name="jenkins-aft" depends="pt-clean-screen-captures, python-clean, test-aft-run" description="Jenkins target to run all the afts" />
+
+	
+	<target name="prep-aft-run" depends="">
+		<!-- aft.modules -->
+		<if><isset property="aft.modules"/><then>
+			<property name="aft.modules.arg" value="-modules=${aft.modules}"/>
+		</then><else>
+			<property name="aft.modules.arg" value=""/>
+		</else></if>
+		<!-- aft.groups -->
+		<if><isset property="aft.groups"/><then>
+			<property name="aft.groups.arg" value="-groups=${aft.groups}"/>
+		</then><else>
+			<property name="aft.groups.arg" value=""/>
+		</else></if>
+		<!-- aft.collect -->
+		<if><isset property="aft.collect"/><then>
+			<property name="aft.collect.arg" value="-collect-only"/>
+		</then><else>
+			<property name="aft.collect.arg" value=""/>
+		</else></if>
+		<!-- aft.ids -->
+		<if><isset property="aft.ids"/><then>
+			<property name="aft.ids.arg" value="-ids=${aft.ids}"/>
+		</then><else>
+			<property name="aft.ids.arg" value="--with-id"/>
+		</else></if>
+		<!-- aft.failed -->
+		<if><isset property="aft.failed"/><then>
+			<property name="aft.failed.arg" value="-fail-only"/>
+		</then><else>
+			<property name="aft.failed.arg" value=""/>
+		</else></if>
+	</target>
+	
+	<target name="test-aft-run" depends="prep-aft-run" 
+		description='Runs the afts&#10;
+				examples:&#10;&#10;
+						ant test-aft-run -Daft.groups="unit,powertools"  Only run groups unit and powertools &#10;
+						ant test-aft-run -Daft.collect=1  Only display the list of tests in the order that they will run &#10;
+						ant test-aft-run -Daft.ids="10,11" Only run the tests with ids 10 and 11&#10;
+						ant test-aft-run -Daft.modules="common/utils_test.py,common/powertools_test.py" Only run the tests from these modules 11&#10;
+						ant test-aft-run -Daft.failed=1 Only run the tests that failed on the last run &#10;
+				'>
+		<run-sk-script path="${aft.tests.dir}/runtests.sikuli">
+			<additional-args>
+				<arg line="-- "/>
+				<arg line="-working-dir=${aft.tests.dir}" />
+				<arg value="-reports-dir=${aft.reports.dir}" />
+				<arg value="-verbosity=2" />
+				<arg line="${aft.ids.arg} ${aft.modules.arg}" />
+				<arg line="${aft.collect.arg} ${aft.groups.arg} ${aft.failed.arg}" />
+			</additional-args>
+		</run-sk-script>
+	</target>
+	
+	<target name="test-aft-clean" depends="pt-clean-screen-captures" 
+			description="Cleans the aft output.">
+		<delete file="nosetests.xml" />
+		<delete file=".noseids"/>
+	</target>
+	
+	<target name="pt-clean"  depends="pt-project-clone-delete-all, pt-clean-screen-captures, 
+			test-aft-clean, pt-app-delete-secret-folder"
+		description="Uninstalls PowerTools, removes all AppData/Roaming files, removes all local projects">
+		
+	</target>
+	
+	<target name="pt-clean-screen-captures" description="Deletes all of the screen captures.">
+		<delete dir="${env.SCREEN_CAPTURES}" failonerror="true" />
+	</target>
+		
+</project>

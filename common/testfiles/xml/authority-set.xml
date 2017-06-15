@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--*
+** THIS FILE IS MANAGED BY POWERTOOLS. MANUAL CHANGES WILL BE LOST! **
+   Managed By: PowerTools Desktop 3.0.11.1 (R1) (Server v1.0.557)(Java Exported)
+   Managed For: Innovative Insurance Company (3.0.11.1)
+   Export Date: 20150527 15:54:37
+   Exported By: [clint.modien@somecompany.com]
+   Export Code: [EE6A752B59C75063ABAEE1BBCE0C63B3]
+*-->
+<AuthorityAttributeSets>
+  <AuthorityAttributeSet id="ClaimApprovals" Name="Claim Approvals" Description="Attributes for Claim Approval Rules">
+    <AuthorityAttribute id="AllowAdditionalInsuredEdit" Name="Allow Additional Insured Editing" Description="Allow additional insured adding/deleting/copying without approval" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowCatastropheChange" Name="Allow Catastrophe Change" Description="Allow catastrophe change without approval" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowDOIComplaintTurnOff" Name="Allow DOI Complaint Turn Off" Description="Allow DOI Complaint Turn Off" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowDOIComplaintTurnOn" Name="Allow DOI Complaint Turn On" Description="Allow DOI Complaint Turn On" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowExceedPolicyLimits" Name="Allow Exceed Policy Limits" Description="Allow Exceed Policy Limits" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowPaymentExceedAdjustmentReserves" Name="Allow Payment Exceeds Adjustment Reserves" Description="Allow a payment amount that is greater than the adjustment reserve amount" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowPaymentExceedFastTrackLimit" Name="Allow Payment Exceeds Fast Track Limit" Description="Allow a fast track payment amount that is greater than the maximum limit" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowPaymentExceedIndemnityReserves" Name="Allow Payment Exceeds Indemnity Reserves" Description="Allow a payment amount that is greater than the indemnity reserve amount" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowPayToOverride" Name="Allow Pay To Override" Description="Allow Pay To Override" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowRecoveryExceedPayment" Name="Allow Recovery Exceeds Payment" Description="Allow Recovery Exceeds Payment" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowRecoveryPostExceedExpected" Name="Allow Recovery Post Exceeds Expected" Description="Allow Recovery Post Exceed Expected" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowReopen" Name="Allow Reopen" Description="Allow Reopen" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowSIUTurnOff" Name="Allow SIU Turn Off" Description="Allow SIU Turn Off" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowSIUTurnOn" Name="Allow SIU Turn On" Description="Allow SIU Turn On" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowStartNewClaim" Name="Allow Start New Claim" Description="Allow Start of a New Claim" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowTransactionDOIComplaint" Name="Allow Transaction DOI Complaint" Description="Allow Transaction DOI Complaint" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowTransactionsInSIU" Name="Allow Transactions In SIU" Description="Allow Transactions In SIU" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowTransactionsInSuit" Name="Allow Transactions In Suit" Description="Allow Transactions In Suit" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowTransactionsWhereNotAssigned" Name="Allow Transactions Where Not Assigned" Description="Allow Transactions Where Not Assigned" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="CanDeny" Name="Can Deny" Description="Can Deny" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="CanUndeny" Name="Can Undeny" Description="Can Undeny" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="MaximumAdjustmentPaymentAmt" Name="Maximum Adjustment Payment Amount" Description="Maximum Adjustment Payment Amount" DataTypeCd="Currency" DefaultValue="50000" />
+    <AuthorityAttribute id="MaximumAdjustmentReserveAmt" Name="Maximum Adjustment Reserve Amount" Description="Maximum Adjustment Reserve Amount" DataTypeCd="Currency" DefaultValue="50000" />
+    <AuthorityAttribute id="MaximumFastTrackPaymentAmt" Name="Maximum Fast Track Payment Amount" Description="Maximum Fast Track Payment Amount" DataTypeCd="Currency" DefaultValue="5000" />
+    <AuthorityAttribute id="MaximumIndemnityPaymentAmt" Name="Maximum Indemnity Payment Amount" Description="Maximum Indemnity Payment Amount" DataTypeCd="Currency" DefaultValue="50000" />
+    <AuthorityAttribute id="MaximumIndemnityReserveAmt" Name="Maximum Indemnity Reserve Amount" Description="Maximum Indemnity Reserve Amount" DataTypeCd="Currency" DefaultValue="50000" />
+    <AuthorityAttribute id="MaximumPaymentAfterCloseAmt" Name="Maximum Payment After Close Amount" Description="Maximum Payment After Close Amount" DataTypeCd="Currency" DefaultValue="50000" />
+    <AuthorityAttribute id="MaximumRecoveryAmt" Name="Maximum Recovery Amount" Description="Maximum Recovery Amount" DataTypeCd="Currency" DefaultValue="50000" />
+    <AuthorityAttribute id="MaximumRecoveryPostAmt" Name="Maximum Recovery Post Amount" Description="Maximum Recovery Post Amount" DataTypeCd="Currency" DefaultValue="50000" />
+  </AuthorityAttributeSet>
+  <AuthorityAttributeSet id="PolicyApprovals" Name="Policy Approvals" Description="Attributes for Policy Approval rules go here">
+    <AuthorityAttribute id="ApproveNoInsuranceScore" Name="Allowed To Approve No Insurance Score" Description="Allow transaction without insurance score" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="ApproveTransactionBehindLossDt" Name="Allowed To Approve Transaction Behind Loss Date" Description="Can the user approve a transaction behind a loss date" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="ApproveMPCWithoutPolNum" Name="Allowed To Approve Multi Policy Credit" Description="Can the user approve a multi policy credit without a valid policy number" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="ApproveRemoveCovWithClaim" Name="Allowed To Approve Removal of Coverage with Claim" Description="Can the user approve the removal of a coverage that has a claim" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="ApproveWaivePolicyFee" Name="Allowed To Approve Waive of Policy Fee" Description="Can the user waive the policy fee without approval" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="DWApproveAddrChg" Name="Dwelling - Allowed To Approve Address Change" Description="Can the user approve an address change" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="DWApproveDeductibleChg" Name="Dwelling - Allowed To Approve Deductible Change" Description="Can the user approve a deductible change" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="DWApproveGT2Mort" Name="Dwelling - Allowed To Approve More Than 2 Mortgagees" Description="Can the user approve more than 2 mortgagees" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="DWApproveMLChg" Name="Dwelling - Allowed To Approve M or L Coverage Change" Description="Can the user approve a coverage M or L change" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="DWApproveNameChg" Name="Dwelling - Allowed To Approve Name Change" Description="Can the user approve a name change" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="DWApproveNewBusiness" Name="Dwelling - Allowed To Approve New Business" Description="Can the user issue new business without approval" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="DWMaxCoverageA" Name="Dwelling - Maximum Coverage A Allowed" Description="The maximum Coverage A allowed without approval" DataTypeCd="Currency" DefaultValue="300000" />
+    <AuthorityAttribute id="DWMaxCoverageAChg" Name="Dwelling - Maximum Coverage A Change Allowed" Description="The Maximum Coverage A changed allowed without approval" DataTypeCd="Currency" DefaultValue="5000" />
+    <AuthorityAttribute id="HOApproveAddrChg" Name="Homeowners - Allowed To Approve Address Change" Description="Can the user approve an address change" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="HOApproveDeductibleChg" Name="Homeowners - Allowed To Approve Deductible Change" Description="Can the user approve a deductible change" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="HOApproveGT2Mort" Name="Homeowners - Allowed To Approve More Than 2 Mortgagees" Description="Can the user approve more than 2 mortgagees" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="HOApproveMLChg" Name="Homeowners - Allowed To Approve M or L Coverage Change" Description="Can the user approve a coverage M or L change" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="HOApproveNameChg" Name="Homeowners - Allowed To Approve Name Change" Description="Can the user approve a name change" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="HOApproveNewBusiness" Name="Homeowners - Allowed To Approve New Business" Description="Can the user issue new business without approval" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="HOMaxCoverageA" Name="Homeowners - Maximum Coverage A Allowed" Description="The maximum Coverage A allowed without approval" DataTypeCd="Currency" DefaultValue="300000" />
+    <AuthorityAttribute id="HOMaxCoverageAChg" Name="Homeowners - Maximum Coverage A Change Allowed" Description="The Maximum Coverage A changed allowed without approval" DataTypeCd="Currency" DefaultValue="5000" />
+    <AuthorityAttribute id="MinimumInsuranceScore" Name="Minimum Insurance Score Allowed" Description="The minimum insurance score allowed without approval" DataTypeCd="Numeric" DefaultValue="700" />
+    <AuthorityAttribute id="MaxBackDateNBDays" Name="Maximum Back Date New Business Days" Description="The maximum number of days a new policy may be back dated" DataTypeCd="Numeric" DefaultValue="0" />
+    <AuthorityAttribute id="MaxForwardDateNBDays" Name="Maximum Forward Date New Business Days" Description="The maximum number of days a new policy may be forward dated" DataTypeCd="Numeric" DefaultValue="0" />
+    <AuthorityAttribute id="PAApproveDeductibleDecrease" Name="Personal Auto - Allowed To Approve Deductible Decrease" Description="Can the user decrease deductibles without approval" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="PAApproveForcedDeductibleChg" Name="Personal Auto - Allowed To Approve Forced Deductibles Change" Description="Can the user change forced deductibles without approval" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="PAApproveMultiAI" Name="Personal Auto - Allowed To Approve Multiple AIs Per Vehicle" Description="Can the user add multiple AIs to a vehicle without approval" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="PAApproveNameChg" Name="Personal Auto - Allowed To Approve Name Change" Description="Can the user change the insured name without approval" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="PAApproveNewBusiness" Name="Personal Auto - Allowed To Approve New Business" Description="Can the user issue new business without approval" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="PAMaxCoverageBI" Name="Personal Auto - Maximum Coverage BI Allowed - IIC" Description="The maximum Coverage BI allowed without approval for IIC PA" DataTypeCd="String" DefaultValue="0/0" />
+    <AuthorityAttribute id="PAMAXCoveragePD" Name="Personal Auto - Maximum Coverage PD Allowed - IIC" Description="The maximum Coverage PD allowed without approval for IIC PA" DataTypeCd="Currency" DefaultValue="0" />
+    <AuthorityAttribute id="PAMaxStatedAmount" Name="Personal Auto - Maximum Stated Amount Allowed" Description="The maximum Stated Amount allowed without approval for PA" DataTypeCd="Currency" DefaultValue="0" />
+    <AuthorityAttribute id="ApproveMoratorium" Name="Allowed To Approve Within A Moratorium" Description="Allow bind/issue within a defined moratorium" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowToApproveDuneBuggy" Name="Allow To Approve Dune Buggy" Description="Allow To Approve Dune Buggy" DataTypeCd="YesNo" DefaultValue="No" />
+  </AuthorityAttributeSet>
+  <AuthorityAttributeSet id="BatchPrintEdits" Name="Batch Print Edits" Description="Attributes for Batch Print Edits go here">
+    <AuthorityAttribute id="AllowCancelBatchPrintRequest" Name="Allow Cancel Batch Print Request" Description="Allow user to mark pending batch print requests as cancelled" DataTypeCd="String" DefaultValue="User" />
+  </AuthorityAttributeSet>
+  <AuthorityAttributeSet id="BillingEdits" Name="Billing Edits" Description="Attributes for Billing Edits">
+    <AuthorityAttribute id="AllowBatchReceipts" Name="Allow Batch Receipts" Description="Allow the user to access and post batch receipts" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowDeletePendingBatch" Name="Allow Deletion of Pending Batches" Description="Allow user to delete a pending batch" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowDirectBillingTransactions" Name="Allow Direct Billing Transactions" Description="Allow the user to enter transactions directly in billing that would normally have to come from underwriting. System administrators only." DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowProducerCash" Name="Allow Producer Cash" Description="Allow the user to access and post producer cash" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowReturnPremium" Name="Allow Return Premium" Description="Allow the user to process return premium" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowReturnPremiumPayToOverride" Name="Allow Return Premium Pay To Override" Description="Allow the user to override to return premium pay to" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowSuspendedCashPost" Name="Allow Suspended Cash Post" Description="Allow the user to access and post suspended cash" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowViewPendingBatches" Name="Allow View Pending Batches" Description="Allow user to view/work on all pending batches regardless of batch ownership" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowCreateInvoice" Name="Allow Create Invoice" Description="Allow user to create a new invoice" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowViewBillingDetail" Name="Allow Access to Billing Detail Screen" Description="Allow user to view Billing Detail Screen" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowWriteOff" Name="Allow Write-off" Description="Allow the user to access and process write-offs" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowACHReversal" Name="Allow ACH Reversal" Description="Allow the user to reverse an ACH payment" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowReturnSuspenseReversal" Name="Allow Return Suspense Reversal" Description="Allow the user to reverse a return suspense payment" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowDeleteScheduledPayment" Name="Allow Deletion of Scheduled Payment" Description="Allow the user to delete a scheduled payment" DataTypeCd="YesNo" DefaultValue="No" />
+  </AuthorityAttributeSet>
+  <AuthorityAttributeSet id="ClaimEdits" Name="Claim Edits" Description="Attributes for Claim Edits">
+    <AuthorityAttribute id="AllowAccessToClaimsOutsideOfBranch" Name="Allow Access To Claims Outside Of Branch" Description="Allow Access To Claims Outside Of Branch" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowChangeAdjusterAssignment" Name="Allow Change Adjuster Assignment" Description="Allow Change Adjuster Assignment" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowChangeAppraiserAssignment" Name="Allow Change Appraiser Assignment" Description="Allow Change Appraiser Assignment" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowChangeBranchAssignment" Name="Allow Change Branch Assignment" Description="Allow Change Branch Assignment" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowChangeLossCause" Name="Allow Change Loss Cause" Description="Allow Change to Loss Cause" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowChangeLossDate" Name="Allow Change Loss Date" Description="Allow Change Loss Date" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowChangeReportedDate" Name="Allow Change Reported Date" Description="Allow Change Reported Date" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowChangeSalvageAssignment" Name="Allow Change Salvage Assignment" Description="Allow Change Salvage Assignment" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowClaimantRemove" Name="Allow Claimant Remove" Description="Allow Claimant Remove" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowClaimTakeOwnership" Name="Allow Take Ownership of a Claim" Description="Allow current user to take ownership of a claim from another user" DataTypeCd="YesNo" DefaultValue="Never" />
+    <AuthorityAttribute id="AllowClaimTransactions" Name="Allow Claim Transactions" Description="Allow Claim Transactions" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowDeny" Name="Allow Deny" Description="Allow Deny" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowFastTrack" Name="Allow Fast Track" Description="Allow Fast Track" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowSchedulePayment" Name="Allow Schedule Payment" Description="Allow Schedule Payment" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowFeatureBuild" Name="Allow Feature Build" Description="Allow Feature Build" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowFeatureOverride" Name="Allow Feature Override" Description="Allow Feature Override" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowLossNoticeDeletion" Name="Allow Loss Notice Deletion" Description="Allow Deletion of Loss Notice" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowNoticeTakeOwnership" Name="Allow Notice Take Ownership" Description="Allow current user to take ownership of a notice from another user" DataTypeCd="YesNo" DefaultValue="Never" />
+    <AuthorityAttribute id="AllowOpenReserve" Name="Allow Open Reserve" Description="Allow Open Reserve" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowOverrideAutoAssignedCatastrophe" Name="Allow Override of Automatically Assigned Catastrophe" Description="Allow Override of any catastrophe automatically assigned at close-out" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowPayment" Name="Allow Payment" Description="Allow Payment" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowCopyPayment" Name="Allow Copy Payment" Description="Allow Copy Payment" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowPolicyLimitOverride" Name="Allow Policy Limit Override" Description="Allow Policy Limit Override" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowPrintPolicy" Name="Allow Print Policy" Description="Allow Print Policy" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowHistoricalClaimTransactionEntry" Name="Allow Historical Claim Transaction Entry" Description="Allow Historical Claim Transaction Entry" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowRecovery" Name="Allow Recovery" Description="Allow Recovery" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowRecoveryPost" Name="Allow Recovery Post" Description="Allow Recovery Post" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowReverseStopPayment" Name="Allow Reversing a Stopped Payment" Description="Allow Reversing a Stopped Payment" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowReverseVoidPayment" Name="Allow Reversing a Voided Payment" Description="Allow Reversing a Voided Payment" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowStopPayment" Name="Allow Stop Payment" Description="Allow Stopping a Payment" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowUndeny" Name="Allow Undeny" Description="Allow Undeny" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowUpdatePolicy" Name="Allow Update Policy" Description="Allow Update Policy" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowVoidPayment" Name="Allow Void Payment" Description="Allow Voiding a Payment" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="ClaimBranchSecurityLevel" Name="Claim Branch Access Level" Description="Level of Security For Claim Access by Branches" DataTypeCd="String" DefaultValue="High" />
+    <AuthorityAttribute id="ClaimProviderSecurityLevel" Name="Claim Provider Access Level" Description="Level of Security For Claim Access by Provider Users" DataTypeCd="String" DefaultValue="High" />
+    <AuthorityAttribute id="ShowIncurredInformation" Name="Show Incurred Information" Description="Show Incurred Information" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowSalvageWorksheet" Name="Allow Salvage Worksheet" Description="Allow Salvage Worksheet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowReinsuranceRecoveryAdjust" Name="Allow Reinsurance Recovery Adjustments" Description="Allow Reinsurance Recovery Adjustments" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowReinsuranceRecoveryPost" Name="Allow Reinsurance Recovery Post" Description="Allow Reinsurance Recovery Post" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowISOClaimSearchOverride" Name="Allow ISO Claim Search Override" Description="Allow ISO Claim Search Override" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowClaimantLinking" Name="Allow Claimant Linking" Description="Allow Ability to Copy Claimant for Claimant Linking" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowStopReissuePayment" Name="Allow Stop/Reissue Payment" Description="Allow Stopping and then Reissuing a Payment" DataTypeCd="YesNo" DefaultValue="Yes" />
+  </AuthorityAttributeSet>
+  <AuthorityAttributeSet id="CustomerEdits" Name="Customer Edits" Description="Attributes for Customer Edits go here">
+    <AuthorityAttribute id="AllowCustomerInformationChange" Name="Allow Customer Information Changes" Description="Allow user to modify customer information" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowNewCustomer" Name="Allow New Customer To Be Created" Description="Allow a new customer to be created" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="MinCharClaimantSearch" Name="Minimum Characters Claimant Search" Description="Minimum number of characters allowed for the claimant search" DataTypeCd="Numeric" DefaultValue="1" />
+    <AuthorityAttribute id="MinCharCustomerSearch" Name="Minimum Characters Customer Search" Description="Minimum number of characters allowed for the customer search" DataTypeCd="Numeric" DefaultValue="1" />
+    <AuthorityAttribute id="MinClearingMatchCriteria" Name="Minimum Clearing Match Criteria" Description="Minimum number of search criteria required" DataTypeCd="Numeric" DefaultValue="1" />
+    <AuthorityAttribute id="MinClearingMatches" Name="Minimum Clearing Matches" Description="Minimum number of search criteria that must return results" DataTypeCd="Numeric" DefaultValue="1" />
+    <AuthorityAttribute id="VIPAccessLevel" Name="VIP Access Level" Description="Maximum Customer VIP Level that can be accessed" DataTypeCd="Numeric" />
+  </AuthorityAttributeSet>
+  <AuthorityAttributeSet id="PolicyEdits" Name="Policy Edits" Description="Attributes for Policy Edits go here">
+    <AuthorityAttribute id="AllowAdditionalDeclarationTextEntry" Name="Allow Additional Declaration Text Entry" Description="Allow Entry of Additional Declaration Text" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowAppOnceSubmittedDelete" Name="Allow Application Deletion After Submission" Description="Allow current user to delete an application after it has been submitted in the past" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowAppTakeOwnership" Name="Allow Application Take Ownership" Description="Allow current user to take ownership of an application from another user. Allowed values are Never, Limited, Trusted, Always and comma delimited list of Authority Roles" DataTypeCd="YesNo" DefaultValue="Never" />
+    <AuthorityAttribute id="AllowAudit" Name="Allow Audit" Description="Allow audit of a policy" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowCancel" Name="Allow Cancel" Description="Allow Cancel" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowCancellationAG" Name="Allow Cancellation Agent Request" Description="Allow cancellation by agent reqest" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowCancellationCR" Name="Allow Cancellation Company Request" Description="Allow cancellation by company request" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowCancellationIR" Name="Allow Cancellation Insured Request" Description="Allow cancellation by insured request" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowCancellationNP" Name="Allow Cancellation Non Pay" Description="Allow cancellation by non payment of dues" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowCancellationWONotice" Name="Allow Cancellation Without Notice" Description="Allow cancellations without any prior notification" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowCancellationWONoticeDays" Name="Allow Cancellation Without Notice Days Validation" Description="Allow cancellation without notice days validation, allow cancellation reason selection from both in UW period and out" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowChangeDate" Name="Allow Change Date" Description="Allow changing of policy effective date" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowCommissionContribution" Name="Allow Commission Contribution" Description="Allow Commission Contribution" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowDeleteCustomer" Name="Allow Delete Customer" Description="Allow Delete of Customer" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowAllNonDriverTypes" Name="Allow all Non-Driver Types" Description="Allow all Non-Driver Types" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowDriverAssignmentOverride" Name="Allow Driver Assignment Override" Description="Allow Driver Assignment Override" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowEndorsement" Name="Allow Endorsement" Description="Allow Endorsement of a Policy" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowEndorsementAfterNOCCancelDate" Name="Allow Endorsement After NOC Cancel Date" Description="Allow Endorsement of a policy in Cancel Notice status effective after the Cancel Date" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowExpire" Name="Allow Expire" Description="Allow policy to expire" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowExternalSourceLossHistoryDelete" Name="Allow External Source Loss History Delete" Description="Allow deletion of loss history where source is not Application" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowForcedDeductible" Name="Allow Forced Deductible" Description="Allow Forced Deductible on Collision and Comprehensive" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowIgnoreDriverPoints" Name="Allow Ignoring of Driver Points" Description="Allow ignoring of driver points" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowInfractionIgnoreChange" Name="Allow Infraction Ignore Change" Description="Allow an infraction to be marked as ignored" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowMoveApplication" Name="Allow Move Application" Description="Allow moving of application to new customer" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowMovePolicy" Name="Allow Move Policy" Description="Allow moving of policy to new customer" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowMoveQuote" Name="Allow Move Quote" Description="Allow moving of quote to new customer" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowNewBusiness" Name="Allow New Business" Description="Allow creation of new business quotes" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowNewQuote" Name="Allow New Quote" Description="Allow New Quote" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowNewShellPolicy" Name="Allow New Shell Policy" Description="Allow New Shell Policy" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowNoDownPayment" Name="Allow No Down Payment" Description="Allow current user to create a policy without a down payment" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowNonRenewal" Name="Allow Non-Renewal" Description="Allow non-renewal of policy" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowNonRenewalReversal" Name="Allow Non-Renewal Reversal" Description="Allow the reversal of a non-renewal policy" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowOpenNewQuote" Name="Allow Open New Quote" Description="Allow opening a new version of a closed quote" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowCopyQuote" Name="Allow Copy Quote" Description="Allow copying of a quote" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowOpenQuote" Name="Allow Open Quote" Description="Allow opening of a closed quote" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowOverrideChargedDriverPoints" Name="Allow Override of Charged Driver Points" Description="Allow overriding of charged driver points" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowOverrideInsuranceScore" Name="Allow Override of Insurance Score" Description="Allow current user to override the Insurance Score" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowPlaceOnHold" Name="Allow Place On Hold" Description="Allow placing a policy on hold" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowPremiumInfo" Name="Allow Premium Info" Description="Allow current user to view the Premium Info" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowProductChange" Name="Allow Product Changes" Description="Allow Product changes to occur" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowQuoteTakeOwnership" Name="Allow Quote Take Ownership" Description="Allow current user to take ownership of a quote from another user. Allowed values are Never, Limited, Trusted, Always and comma delimited list of Authority Roles" DataTypeCd="YesNo" DefaultValue="Never" />
+    <AuthorityAttribute id="AllowReinstatementAG" Name="Allow Reinstatement Agent Request" Description="Allow reinstatement by agent request" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowReinstatementCR" Name="Allow Reinstatement Company Request" Description="Allow reinstatement by company request" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowReinstatementIR" Name="Allow Reinstatement Insured Request" Description="Allow reinstatement by insured request" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowReinstatementNP" Name="Allow Reinstatement Non Pay" Description="Allow reinstatement by non payment of dues" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowReinstatementWithLapseAG" Name="Allow Reinstatement With Lapse Agent Request" Description="Allow reinstatement with lapse by agent request" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowReinstatementWithLapseCR" Name="Allow Reinstatement With Lapse Company Request" Description="Allow reinstatement with lapse by company request" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowReinstatementWithLapseIR" Name="Allow Reinstatement With Lapse Insured Request" Description="Allow reinstatement with lapse by insured request" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowReinstatementWithLapseNP" Name="Allow Reinstatement With Lapse Non Pay" Description="Allow reinstatement with lapse by non payment of dues" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowAdjustLastLapsePeriod" Name="Allow Adjust Last Lapse Period" Description="Allow adjustment of the last lapse period" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowReinsurance" Name="Allow Reinsurance" Description="Allow current user to view/edit the Reinsurance Information" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowRenewal" Name="Allow Renewal" Description="Allow renewal of policy" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowRenewalActivate" Name="Allow Renewal Activate" Description="Allow renewal activate for future policy" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowRenewalStart" Name="Allow Renewal Start" Description="Allow renewal start of policy" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowRewriteNew" Name="Allow Rewrite New" Description="Allow policy transaction of a rewrite new" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowRewriteRenewal" Name="Allow Rewrite Renewal" Description="Allow renewal rewrite of policy" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowSpecialOptions" Name="Allow Special Options" Description="Allow current user to view the Special Options tab" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowSpecialProcessingOptions" Name="Allow Special Processing Options" Description="Allow current user to view/edit the Special Processing Options tile" DataTypeCd="YesNo" DefaultValue="None" />
+    <AuthorityAttribute id="AllowTakeOffHold" Name="Allow Take Off Hold" Description="Allow taking off a hold on a policy" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowTransactions" Name="Allow Transactions" Description="Allow all available policy transactions" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowViewEmployee" Name="Allow Viewing of Employee Information" Description="Allow User to see employee information" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowViewIgnoredDriverPoints" Name="Allow Viewing of Ignored Driver Points" Description="Allow viewing of ignoring of driver points" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowViewInsuranceScore" Name="Allow Viewing of Insurance Score" Description="Allow current user to view the Insurance Score" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowWorksheets" Name="Allow Worksheets" Description="Allow current user to view the Worksheets" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="CanSeeConversionSource" Name="Allow User To See Conversion Source" Description="Allow User to see conversion source" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="CanSeeSaveAndRateButton" Name="Allow User To See Save and Rate Button" Description="Allow User to see SaveAndRate button" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="CanSeeWaiveInspectionFeeField" Name="Allow User To See Waive Inspection Fee Field" Description="Allow User to see Inspection Fee Field" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="CanSeeWaivePolicyFeeField" Name="Allow User To See Waive Policy Fee Field" Description="Allow User to see Waive Policy Fee Field" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="MaxBackDateDays" Name="Maximum Back Date Days" Description="The maximum number of days a policy endorsement may be back dated" DataTypeCd="Numeric" DefaultValue="0" />
+    <AuthorityAttribute id="OverrideUWErrors" Name="Override Underwriting Errors" Description="Override Underwriting Errors" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="ShowCommissionInformation" Name="Show Commission Information" Description="Show Commission Information" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="MinCharInsuredSearch" Name="Minimum Characters Insured Search" Description="Minimum number of characters allowed for the insured search" DataTypeCd="Numeric" DefaultValue="1" />
+    <AuthorityAttribute id="AllowMassUpdateWithOutput" Name="Allow Mass Update With Output" Description="Allow Additional Interest Mass Update with Output" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowMassUpdateWithoutOutput" Name="Allow Mass Update Without Output" Description="Allow Additional Interest Mass Update without Output" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowBrokerOfRecord" Name="Allow Broker Of Record" Description="Allow setting Broker of Record" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowPolicyMakePayment" Name="Allow Make Payment from Policy" Description="Allow Make Payment from Policy" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowStatementAccounts" Name="Allow Statement Accounts for Policy" Description="Allow Statement Accounts for Policy" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowRequestForQuoteReview" Name="Allow Request For Quote Review" Description="Allow Ability to Request a Quote Review" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowRequestForApplicationReview" Name="Allow Request For Application Review" Description="Allow Ability to Request an Application Review" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="MaxHoldDays" Name="Maximum Hold Days" Description="The maximum number of days a policy can be placed on hold" DataTypeCd="Numeric" DefaultValue="0" />
+    <AuthorityAttribute id="AllowHoldWithoutAutomaticRelease" Name="Allow Hold Without Automatic Release" Description="Allow policy hold without an automatic release" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowEndorsementAfterAudit" Name="Allow Endorsement After Audit" Description="Allow an endorsement to be processed after Audit is complete" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowPolicyChangePayPlan" Name="Allow Pay Plan Change from Policy" Description="Allow Pay Plan Change from Policy without transaction" DataTypeCd="YesNo" DefaultValue="No" />
+  </AuthorityAttributeSet>
+  <AuthorityAttributeSet id="ClaimCheckPrinters" Name="Claim Check Printers" Description="Default Check Printers">
+    <AuthorityAttribute id="CheckPrinterList" Name="Check Printer List" Description="Check Printer Browse" DataTypeCd="String" DefaultValue="None" />
+  </AuthorityAttributeSet>
+  <AuthorityAttributeSet id="JobAuthority" Name="Job Authority" Description="Attributes for Job Authority">
+    <AuthorityAttribute id="AllowBatchQuoteLoadJobs" Name="Allow Batch Quote Load Jobs" Description="Allow the user to access and run batch quote load jobs" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowCommissionJobs" Name="Allow Commission Jobs" Description="Allow the user to access and run the Commission Jobs" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowDailyJobs" Name="Allow Daily Jobs" Description="Allow the user to access and run the Daily Jobs" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowMaintenanceJobs" Name="Allow Maintenance Jobs" Description="Allow the user to access and run the Maintenance Jobs" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowDeploymentJobs" Name="Allow Deployement Jobs" Description="Allow the user to access and run the Deployment Jobs" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowMonthlyJobs" Name="Allow Monthly Jobs" Description="Allow the user to access and run the Monthly Jobs" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowOpenAccountAgingJobs" Name="Allow Open Account Aging Jobs" Description="Allow the user to access and run the Open Account Aging Jobs" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowSystemSetupJobs" Name="Allow System Setup Jobs" Description="Allow the user to access and run the System Setup Jobs" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowUpgradeJobs" Name="Allow Upgrade Jobs" Description="Allow the user to access and run the Upgrade Jobs" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowVinLoadJobs" Name="Allow VIN Load Jobs" Description="Allow the user to access and run the VIN Load Jobs" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowChoicePointContribution" Name="Allow ChoicePoint Contribution Jobs" Description="Allow the user to access and run the ChoicePoint Contribution Jobs" DataTypeCd="YesNo" DefaultValue="No" />
+  </AuthorityAttributeSet>
+  <AuthorityAttributeSet id="Menu" Name="Menu Access" Description="Menu access for each menu item">
+    <AuthorityAttribute id="Site-Workflow" Name="Site-Workflow" Description="Main site inbox" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Cabinet" Name="Site-Cabinet" Description="Main site cabinet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Policy" Name="Site-Policy" Description="Main site policy" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Policy-QuickQuote" Name="Site-Policy-QuickQuote" Description="Main site quick quote" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Policy-PolicyProcessing" Name="Site-Policy-PolicyProcessing" Description="Main site policy processing" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Policy-UnderwritingReports" Name="Site-Policy-UnderwritingReports" Description="Main site policy underwriting reports" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Policy-UnderwritingMaintenance" Name="Site-Policy-UnderwritingMaintenance" Description="Main site policy underwriting maintenance" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Policy-Moratorium" Name="Site-Policy-Moratorium" Description="Main site policy moratorium maintenance" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Policy-MyProducerProfile" Name="Site-Policy-MyProducerProfile" Description="Main site policy my producer profile" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Claims" Name="Site-Claims" Description="Main site claims" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Claim-LossNotice" Name="Site-Claim-LossNotice" Description="Main site loss notice processing" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Claim-ClaimProcessing" Name="Site-Claim-ClaimProcessing" Description="Main site claim system processing" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Claim-ClaimReports" Name="Site-Claim-ClaimReports" Description="Main site claim system reports" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Claim-ClaimMaintenance" Name="Site-Claim-ClaimMaintenance" Description="Main site claim system maintenance" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Billing" Name="Site-Billing" Description="Main site billing" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Billing-BillingProcessing" Name="Site-Billing-BillingProcessing" Description="Main site billing processing" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Billing-BillingReports" Name="Site-Billing-BillingReports" Description="Main site billing reports" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Payables" Name="Site-Payables" Description="Main site payables" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Payable-PayableInquiry" Name="Site-Payable-PayableInquiry" Description="Main site payable inquiry" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Payable-BatchCheckPrint" Name="Site-Payable-BatchCheckPrint" Description="Main site payable batch check printing" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Payable-BatchCheckReprint" Name="Site-Payable-BatchCheckReprint" Description="Main site payable batch check re-printing" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Payable-CombinedPaymentReverse" Name="Site-Payable-CombinedPaymentReverse" Description="Main site payable combined payment reverse" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Payable-PayableStatement" Name="Site-Payable-PayableStatement" Description="Main site payable statement importing/exporting" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Payable-PositivePayExport" Name="Site-Payable-PositivePayExport" Description="Positive pay statement exporting" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Payable-PayableMaintanance" Name="Site-Payable-PayableMaintanance" Description="Main site payable maintenance" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Payable-PayableReports" Name="Site-Payable-PayableReports" Description="Main site payable reports" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Commission" Name="Site-Commission" Description="Main site commission" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Commission-CommissionReports" Name="Site-Commission-CommissionReports" Description="Main site commission reports" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Commission-CommissionCorrection" Name="Site-Commission-CommissionCorrection" Description="Commission correction screen" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Commission-CommissionPlanMaintenance" Name="Site-Commission-CommissionPlanMaintenance" Description="Commission Plan Maintenance screen" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Accounts" Name="Site-Accounts" Description="Main site accounting" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Vision" Name="Site-Vision" Description="Main site management vision" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Operations" Name="Site-Operations" Description="Main site operations" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Operations-BatchJobs" Name="Site-Operations-BatchJobs" Description="Main site operation batch jobs" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Operations-BatchPrint" Name="Site-Operations-BatchPrint" Description="Main site operation batch printing" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Operations-Utilities" Name="Site-Operations-Utilities" Description="Main site operation batch utilities" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Operations-OperationsReports" Name="Site-Operations-OperationsReports" Description="Main site operation reports" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-AccountingReports" Name="Site-AccountingReports" Description="Main site accounting reports" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-AccountingReports-AccountingBillingReports" Name="Site-AccountingReports-AccountingBillingReports" Description="Main site accounting billing reports" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-AccountingReports-AccountingClaimsReports" Name="Site-AccountingReports-AccountingClaimsReports" Description="Main site accounting claims reports" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-AccountingReports-AccountingAnnualStatementReports" Name="Site-AccountingReports-AccountingAnnualStatementReports" Description="Main site accounting annual statement reports" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-AccountingReports-AccountingAuditReports" Name="Site-AccountingReports-AccountingAuditReports" Description="Main site accounting audit reports" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Admin" Name="Site-Admin" Description="Main site administration tools" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Admin-SiteTools" Name="Site-Admin-SiteTools" Description="Main site administration tools - site tools" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Admin-SystemTools" Name="Site-Admin-SystemTools" Description="Main site administration tools - system tools" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Admin-UserManagement" Name="Site-Admin-UserManagement" Description="Main site administration tools - user management" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Admin-UserSessions" Name="Site-Admin-UserSessions" Description="*User Session Management" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Admin-ChangeDate" Name="Site-Admin-ChangeDate" Description="Main site administration tools - change date" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Admin-ChangeLogLevel" Name="Site-Admin-ChangeLogLevel" Description="Main site administration tools - change logging level (this session only)" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Admin-Database" Name="Site-Admin-Database" Description="Main site administration tools - database tools" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Admin-Provider" Name="Site-Admin-Provider" Description="Main site administration tools - provider maintenance" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Admin-Calendar" Name="Site-Admin-Calendar" Description="Main site adminstratrion tools - calendar maintenance" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Admin-NewsBanner" Name="Site-Admin-NewsBanner" Description="Main site adminstratrion tools - news banner maintenance" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Utility" Name="Site-Utility" Description="Main site utility tools" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Site-Utility-ChangePassword" Name="Site-Utility-ChangePassword" Description="Main site utility tools - change password" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Site-Utility-BatchPrintRequest" Name="Site-Utility-BatchPrintRequest" Description="Main site utility tools - batch print request" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Utility-DatamartExplorer" Name="Site-Utility-DatamartExplorer" Description="Main site utility tools - datamart explorer" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Utility-UtilityReports" Name="Site-Utility-UtilityReports" Description="Main site utility tools - utility reports" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Utility-ModelBrowser" Name="Site-Utility-ModelBrowser" Description="Main site utility tools - model browser" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Test" Name="Site-Test" Description="Main site test tools" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Test-Validation" Name="Site-Test-Validation" Description="Main site test tools - validation" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Logout" Name="Site-Logout" Description="Main site logout" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="UserManagement-Logs" Name="UserManagement-Logs" Description="Main site administration tools - user logs" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Customer-PolicyList" Name="Customer-PolicyList" Description="Customer - Policy List" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Customer-ClaimList" Name="Customer-ClaimList" Description="Claim system access from customer" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Customer-BillingList" Name="Customer-BillingList" Description="Customer - Billing List" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Customer-CustomerInformation" Name="Customer-CustomerInformation" Description="Customer - Customer Information" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Customer-Attachments" Name="Customer-Attachments" Description="Customer - Attachments maintenance" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Customer-Correspondence" Name="Customer-Correspondence" Description="Customer - Correspondence attached to customers" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Customer-Tasks" Name="Customer-Tasks" Description="Customer - Tasks associated with customer" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Customer-Logs" Name="Customer-Logs" Description="Customer - Logs associated with customer" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Customer-Notes" Name="Customer-Notes" Description="Customer - Notes attached to customer" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Customer-DataReports" Name="Customer-DataReports" Description="Customer - Data reports attached to customer" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Customer-OutputHist" Name="Customer-OutputHist" Description="Customer - Output belonging to customer" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Customer-Reports" Name="Customer-Reports" Description="Report access from customer" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Customer-Reports-LossSummary" Name="Customer-Reports-LossSummary" Description="Loss Summary Report access from customer" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Customer-Reports-LossSummary-NoReserves" Name="Customer-Reports-LossSummary" Description="Loss Summary Report access without showing reserves from customer" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Customer-Documents" Name="Customer-Documents" Description="Customer - Documents associated with Customer" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="QuickQuote-Policy" Name="QuickQuote-Policy" Description="Quick Quote - Quote management" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="QuickQuote-Attachments" Name="QuickQuote-Attachments" Description="Quick Quote - Attachments associated with quote" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="QuickQuote-Correspondence" Name="QuickQuote-Correspondence" Description="Quick Quote - Correspondence associated with quote" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="QuickQuote-Tasks" Name="QuickQuote-Tasks" Description="Quick Quote - Tasks associated with quote" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="QuickQuote-Logs" Name="QuickQuote-Logs" Description="Quick Quote - Logs associated with quote" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="QuickQuote-Activity" Name="QuickQuote-Activity" Description="Quick Quote - Activity associated with quote" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="QuickQuote-Documents" Name="QuickQuote-Documents" Description="Quick Quote - Documents associated with quick quote" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="QuickQuote-Notes" Name="QuickQuote-Notes" Description="Quick Quote - Notes associated with quote" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="QuickQuote-OutputHist" Name="QuickQuote-OutputHist" Description="Quick Quote - Output history belonging to quotes" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Quote-Policy" Name="Quote-Policy" Description="Quote - Quote management" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Quote-Attachments" Name="Quote-Attachments" Description="Quote - Attachments associated with quote" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Quote-Correspondence" Name="Quote-Correspondence" Description="Quote - Correspondence associated with quote" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Quote-Tasks" Name="Quote-Tasks" Description="Quote - Tasks associated with quote" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Quote-Logs" Name="Quote-Logs" Description="Quote - Logs associated with quote" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Quote-Activity" Name="Quote-Activity" Description="Quote - Activity associated with quote" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Quote-Documents" Name="Quote-Documents" Description="Quote - Documents associated with quote" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Quote-Notes" Name="Quote-Notes" Description="Quote - Notes associated with quote" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Quote-DataReports" Name="Quote-DataReports" Description="Quote - Data reports associated with quote" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Quote-OutputHist" Name="Quote-OutputHist" Description="Quote - Output history belonging to quotes" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Application-Trans" Name="Application-Trans" Description="Application - Transaction information" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Application-Policy" Name="Application-Policy" Description="Application - Application information" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Application-Attachments" Name="Application-Attachments" Description="Application - Attachments associated with the application" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Application-Correspondence" Name="Application-Correspondence" Description="Application - Correspondence associated with the application" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Application-Tasks" Name="Application-Tasks" Description="Application - Tasks associated with the application" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Application-Logs" Name="Application-Logs" Description="Application - Logs associated with the application" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Application-Activity" Name="Application-Activity" Description="Application - Activity associated with the application" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Application-Documents" Name="Application-Documents" Description="Application - Documents associated with application" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Application-Notes" Name="Application-Notes" Description="Application - Notes associated with the application" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Application-DataReports" Name="Application-DataReports" Description="Application - Data reports associated with the application" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Application-OutputHist" Name="Application-OutputHist" Description="Application - History of Outputs associated with the application" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Application-Output" Name="Application-Output" Description="Application - Output associated with the application" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Policy-Policy" Name="Policy-Policy" Description="Policy - Policy information" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Policy-History" Name="Policy-History" Description="Policy - Policy history information" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Policy-Attachments" Name="Policy-Attachments" Description="Policy - Attachments associated with the application" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Policy-Correspondence" Name="Policy-Correspondence" Description="Policy - Correspondence associated with the application" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Policy-Tasks" Name="Policy-Tasks" Description="Policy - Tasks associated with the application" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Policy-Logs" Name="Policy-Logs" Description="Policy - Logs associated with the application" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Policy-Activity" Name="Policy-Activity" Description="Policy - Activity associated with the application" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Policy-Documents" Name="Policy-Documents" Description="Policy - Documents associated with policy" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Policy-Notes" Name="Policy-Notes" Description="Policy - Notes associated with the application" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Policy-DataReports" Name="Policy-DataReports" Description="Policy - Data reports associated with the policy" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Policy-OutputHist" Name="Policy-OutputHist" Description="Policy - History listing of Output associated with the application" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Policy-Claims" Name="Policy-Claims" Description="Claim system access from policy" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Policy-Reports" Name="Policy-Reports" Description="Report access from policy" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Policy-Reports-LossSummary" Name="Policy-Reports-LossSummary" Description="Loss Summary Report access from policy" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Policy-Reports-LossSummary-NoReserves" Name="Policy-Reports-LossSummary" Description="Loss Summary Report access without showing reserves from policy" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Policy-Reports-ReviewPolicyTransactionDetail" Name="Policy-Reports-ReviewPolicyTransactionDetail" Description="Review Policy Transaction Detail Report access from policy" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Policy-Billing" Name="Policy-Billing" Description="Billing system access from policy" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Claim-Issues" Name="Claim-Issues" Description="Claim - Issues associated with the claim" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Claim-General" Name="Claim-General" Description="Claim - Claim information" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Claim-Attachments" Name="Claim-Attachments" Description="Claim - Attachments associated with the claim" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Claim-Correspondence" Name="Claim-Correspondence" Description="Claim - Correspondence associated with the claim" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Claim-Tasks" Name="Claim-Tasks" Description="Claim - Tasks associated with the claim" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Claim-Logs" Name="Claim-Logs" Description="Claim - Logs associated with the claim" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Claim-Activity" Name="Claim-Activity" Description="Claim - Activity associated with the claim" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Claim-Documents" Name="Claim-Documents" Description="Claim - Documents associated with the claim" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Claim-Notes" Name="Claim-Notes" Description="Claim - Notes associated with the claim" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Claim-DataReports" Name="Claim-DataReports" Description="Claim - Data reports associated with the claim" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Claim-OutputHist" Name="Claim-OutputHist" Description="Claim - History listing of Output associated with the claim" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Claim-Reports" Name="Claim-Reports" Description="Report access from claim" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Claim-Reports-ReviewClaimTransactionDetail" Name="Claim-Reports-ReviewClaimTransactionDetail" Description="Review Claim Transaction Detail Report access from claim" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Claim-Output" Name="Claim-Output" Description="Claim - Output associated with the claim" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Log-View" Name="Log-View" Description="View the Log" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Log-Email" Name="Log-Email" Description="Email the Log to support" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Log-Email-Override" Name="Log-Email-Override" Description="Ability to change the support e-mail address" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Billing-Account" Name="Billing-Account" Description="Account system access from billing" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Billing-Operations" Name="Billing-Operations" Description="Operations system access from billing" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Provider-Attachments" Name="Provider-Attachments" Description="Provider - Attachments associated with the Provider" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Provider-Notes" Name="Provider-Notes" Description="Provider - Notes associated with the Provider" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Provider-Tasks" Name="Provider-Tasks" Description="Provider - Tasks associated with the Provider" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Producer-Attachments" Name="Producer-Attachments" Description="Producer - Attachments associated with the Producer" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Producer-Notes" Name="Producer-Notes" Description="Producer - Notes associated with the Producer" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Producer-Tasks" Name="Producer-Tasks" Description="Producer - Tasks associated with the Producer" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="Producer-Documents" Name="Producer-Documents" Description="Producer - Documents associated with Producer" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Toolbar-NewCustomerAndQuote" Name="Toolbar-NewCustomerAndQuote" Description="Toolbar - New Customer and Quote" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Toolbar-NewQuote" Name="Toolbar-NewQuote" Description="Toolbar - New Quote" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="UnderwritingReports-CompanyExperience" Name="UnderwritingReports-CompanyExperience" Description="Acces To Company Experience Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="UnderwritingReports-DirectPremiumWritten" Name="UnderwritingReports-DirectPremiumWritten" Description="Access To Direct Premium Written Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="UnderwritingReports-PremiumByProductAndCoverage" Name="UnderwritingReports-PremiumByProductAndCoverage" Description="Access to Premium By Product and Coverage Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="UnderwritingReports-PremiumAndLossesAtAGlance" Name="UnderwritingReports-PremiumAndLossesAtAGlance" Description="Access to Premium and Losses At A Glance Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="UnderwritingReports-Rolling12MonthsByCarrier" Name="UnderwritingReports-Rolling12MonthsByCarrier" Description="Access to Rolling 12 Months by Carrier Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="UnderwritingReports-Rolling12MonthsByCarrierGroup" Name="UnderwritingReports-Rolling12MonthsByCarrierGroup" Description="Access to Rolling 12 Months by Carrier Group Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="UnderwritingReports-Rolling12MonthsByProductLine" Name="UnderwritingReports-Rolling12MonthsByProductLine" Description="Access to Rolling 12 Months by Product Line Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="UnderwritingReports-TopAndBottomRankingProducers" Name="UnderwritingReports-TopAndBottomRankingProducers" Description="Access to Top And Bottom Ranking Producers Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="UnderwritingReports-AllProducersRanking" Name="UnderwritingReports-AllProducersRanking" Description="Access to All Producers Ranking Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="UnderwritingReports-ProducersLast12MonthTotals" Name="UnderwritingReports-ProducersLast12MonthTotals" Description="Access to Producers Last 12 Months Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="UnderwritingReports-PremiumTransactionsByCarrier" Name="UnderwritingReports-PremiumTransactionsByCarrier" Description="Access to Premium Transactions By Carrier Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="UnderwritingReports-PremiumTransactionsByCarrierGroup" Name="UnderwritingReports-PremiumTransactionsByCarrierGroup" Description="Access to Premium Transactions By Carrier Group Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="UnderwritingReports-PremiumTransactionsByProducer" Name="UnderwritingReports-PremiumTransactionsByProducer" Description="Access to Premium Transactions By Producer Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="UnderwritingReports-PremiumTransactionsByState" Name="UnderwritingReports-PremiumTransactionsByState" Description="Access to Premium Transactions By State Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="UnderwritingReports-ProducerExperience" Name="UnderwritingReports-ProducerExperience" Description="Access Producer Experience Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="UnderwritingReports-ReviewPolicyTransactionDetail" Name="UnderwritingReports-ReviewPolicyTransactionDetail" Description="Access to Review Policy Transaction Detail Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="UnderwritingReports-PolicyAndPremiumRetention" Name="UnderwritingReports-PolicyAndPremiumRetention" Description="Access to Policy and Premium Retention Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="UnderwritingReports-ReviewAgent" Name="UnderwritingReports-ReviewAgent" Description="Access to the Review Agent Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="UnderwritingReports-AgentTrustDepositSlip" Name="UnderwritingReports-AgentTrusDepositSlip" Description="Access to Agent Trust Account Deposit Slip" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="BillingReports-ReceiptsRegister" Name="BillingReports-ReceiptsRegister" Description="Access to Receipts Register Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="BillingReports-CashRegister" Name="BillingReports-CashRegister" Description="Access to Cash Register Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="BillingReports-BillingPaymentsRegister" Name="BillingReports-BillingPaymentsRegister" Description="Access to Billing Payments Register Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="BillingReports-BillingFeesCharged" Name="BillingReports-BillingFeesCharged" Description="Access to Billing Fees Charged Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="BillingReports-BillingAdjustments" Name="BillingReports-BillingFAdjustments" Description="Access to Billing Adjustments Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="BillingReports-OpenItemStatement" Name="BillingReports-OpenItemStatement" Description="Access to Open Item Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="BillingReports-PoliciesWithCreditBalance" Name="BillingReports-PoliciesWithCreditBalance" Description="Access to Policies With Credit Balance Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="BillingReports-PoliciesWithOpenBalance" Name="BillingReports-PoliciesWithOpenBalance" Description="Access to Policies With Open Balance Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="BillingReports-ReceivableTransactionsAtAGlance" Name="BillingReports-ReceivableTransactionsAtAGlance" Description="Access to Billing To The Moment Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="BillingReports-ReviewPremiumReceivableTransactions" Name="BillingReports-ReviewPremiumReceivableTransactions" Description="Access to Review Premium Receivable Transactions Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="ClaimsReports-ClaimsPaymentRegister" Name="ClaimsReports-ClaimsPaymentRegister" Description="Access to Claims Payment Register Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="ClaimsReports-ClaimTransactionDetail" Name="ClaimsReports-ClaimTransactionDetail" Description="Access to Claim Transaction Detail Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="ClaimsReports-NewClaimsReported" Name="ClaimsReports-NewClaimsReported" Description="Access to New Claims Reported Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="ClaimsReports-LargeOpenClaims" Name="ClaimsReports-LargeOpenClaims" Description="Access to Large Open Claims Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="ClaimsReports-SalvageAndSubrogationReceived" Name="ClaimsReports-SalvageAndSubrogationReceived" Description="Access to Salvage And Subrogation Received Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="ClaimsReports-OutstandingClaims" Name="ClaimsReports-OutstandingClaims" Description="Access to Ceded Outstanding Claims Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="ClaimsReports-ChecksIssuedDetailListing" Name="ClaimsReports-ChecksIssuedDetailListing" Description="Access to Checks Issued Detail Listing Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="ClaimsReports-ChecksIssuedByProvider" Name="ClaimsReports-ChecksIssuedByProvider" Description="Access to Checks Issued By Provider Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="ClaimsReports-ReviewClaimDetailTransactions" Name="ClaimsReports-ReviewClaimDetailTransactions" Description="Access to Review Claim Detail Transactions Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="ClaimsReports-PremiumAndLossesAtAGlance" Name="ClaimsReports-PremiumAndLossesAtAGlance" Description="Access to Premium and Losses At A Glance Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AccountingBillingReports-AgentBillAging" Name="AccountingBillingReports-AgentBillAging" Description="Access to Agent Bill Aging Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AccountingBillingReports-DirectBillAging" Name="AccountingBillingReports-DirectBillAging" Description="Access to Direct Bill Aging Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AccountingBillingReports-ReceivableReconciliation" Name="AccountingBillingReports-ReceivableReconciliation" Description="Access to Receivable Reconciliation Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AccountingBillingReports-ReceivableTransactionListing" Name="AccountingBillingReports-ReceivableTransactionListing" Description="Access to Receivable Transaction Listing Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AccountingBillingReports-FutureWrittenPremiumByTransaction" Name="UnderwritingReports-FutureWrittenPremiumByTransaction" Description="Acces To Future Written Premium By Transaction Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AccountingAuditReports-ReinsuranceRecap" Name="AccountingAuditReports-ReinsuranceRecap" Description="Access to Reinsurance Recap Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AccountingClaimsReports-CededClaimTransactionDetail" Name="AccountingClaimsReports-CededClaimTransactionDetail" Description="Access to Ceded Claim Transaction Detail Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AccountingClaimsReports-OutstandingClaimsWithReinsurance" Name="AccountingClaimsReports-OutstandingClaimsWithReinsurance" Description="Access to Outstanding Claims Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AccountingClaimsReports-ClaimReinsuranceTransactionDetail" Name="AccountingClaimsReports-ClaimReinsuranceTransactionDetail" Description="Access to Claim Reinsurance Transaction Detail Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AccountingClaimsReports-DirectClaimsPaidAndIncurredListing" Name="AccountingClaimsReports-DirectClaimsPaidAndIncurredListing" Description="Access to Direct Claims Paid And Incurred Listing Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AccountingClaimsReports-DirectClaimsPaidAndIncurredListingByAnnualStatement" Name="AccountingClaimsReports-DirectClaimsPaidAndIncurredListingByAnnualStatement" Description="Access to Direct Claims Paid And Incurred Listing By Anuual Statement Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AccountingClaimsReports-OutstandingClaimsByAnnualStatementLine" Name="AccountingClaimsReports-OutstandingClaimsByAnnualStatementLine" Description="Access to Outstanding Claims By Annual Statement Line Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AccountingAnnualStatementReports-AnnualStatement" Name="AccountingAnnualStatementReports-AnnualStatement" Description="Access To Annual Statement Page 14 Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AccountingAnnualStatementReports-ScheduleP" Name="AccountingAnnualStatementReports-ScheduleP" Description="Access To Annual Statement Schedule P Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AccountingAnnualStatementReports-PremiumWrittenByAnnualStatementLine" Name="AccountingAnnualStatementReports-PremiumWrittenByAnnualStatementLine" Description="Access to Premium Written By Annual Statement Line Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="OperationsReports-DayBalance" Name="OperationsReports-DayBalance" Description="Access to Day Balancing Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="OperationsReports-DayBalanceDetail" Name="OperationsReports-DayBalanceDetail" Description="Access to Day Balancing Detail Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="OperationsReports-EndOfMonthBalance" Name="OperationsReports-EndOfMonthBalance" Description="Access to End Of Month Balancing Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="OperationsReports-EndOfMonthBalanceDetail" Name="OperationsReports-EndOfMonthBalanceDetail" Description="Access to End Of Month Balancing Detail Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="UtilityReports-NameSearch" Name="UtilityReports-NameSearch" Description="Access to Name Search Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="UtilityReports-NameSearchByType" Name="UtilityReports-NameSearchByType" Description="Access to Name Search By Type Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="CommissionReports-CommissionStatement" Name="CommissionReports-CommissionStatement" Description="Access to Commission Statement Report" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="CommissionCorrection-Add" Name="CommissionCorrection-Add" Description="Allow add of commission correction" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="CommissionCorrection-Edit" Name="CommissionCorrection-Edit" Description="Allow edit of commission correction" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="CommissionCorrection-Delete" Name="CommissionCorrection-Delete" Description="Allow delete of commission correction" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="PayableReports-ChecksIssuedDetailListing" Name="PayableReports-ChecksIssuedDetailListing" Description="Access to Checks Issued Detail Listing Report" DataTypeCd="YesNo" DefaultValue="No" />
+  </AuthorityAttributeSet>
+  <AuthorityAttributeSet id="UserSecurity" Name="User Security Access" Description="User Security to access different parts of the User System">
+    <AuthorityAttribute id="AllowAdminAuthority" Name="Allow Administration Authorities" Description="Allow admin abilities to update user security attributes" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowResetUserPassword" Name="Allow Reset User Password" Description="Allow Resetting user password" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowUpdateUser" Name="Allow Update of Users" Description="Allow updates of a user" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowUserSessionKill" Name="Allow User Session Kill" Description="Allow admin abilities to kill a user session" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowViewUser" Name="Allow User Viewing" Description="Allow viewing of user data" DataTypeCd="YesNo" DefaultValue="No" />
+  </AuthorityAttributeSet>
+  <AuthorityAttributeSet id="APISecurity" Name="API Security Access" Description="API Security to access different services">
+    <AuthorityAttribute id="APISecurityGroups" Name="API Security Group Access" Description="Comma separated API security access groups" DataTypeCd="String" />
+  </AuthorityAttributeSet>
+  <AuthorityAttributeSet id="AttachmentSecurity" Name="Attachment Security Access" Description="Attachment security access to different attachment templates">
+    <AuthorityAttribute id="AttachFileDirect" Name="Attach File Directly" Description="Allow user to attach a file directly (not through MMIS Client)" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AttachFileViaMMISClient" Name="Attach File via MMIS Client" Description="Allow user to attach a file through MMIS Client (now obsolete)" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="QuoteAttachment0001-Add" Name="Quote Attachment Add" Description="Add access for QuoteAttachment0001" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="LossHistoryAttachment-Annotate" Name="Loss History Attachment Annotate" Description="Annotate access for Loss History Attachment" DataTypeCd="String" DefaultValue="No" />
+    <AuthorityAttribute id="IncludeWithTask-Annotate" Name="Include With Task Attachment Annotate" Description="Annotate access for Include With Task Attachment" DataTypeCd="String" DefaultValue="No" />
+  </AuthorityAttributeSet>
+  <AuthorityAttributeSet id="CorrespondenceSecurity" Name="Correspondence Security Access" Description="Correspondence security access to different output templates">
+    <AuthorityAttribute id="GeneralAppLetter-01-Add" Name="General Application Letter Add" Description="Add access for GeneralAppLetter-01" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="GeneralAppLetter-01-View" Name="General Application Letter View" Description="View access for GeneralAppLetter-01" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="GeneralQuoteLetter-01-Add" Name="General Quote Letter Add" Description="Add access for GeneralQuoteLetter-01" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="GeneralQuoteLetter-01-View" Name="General Quote Letter View" Description="View access for GeneralQuoteLetter-01" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="SignedApp-01-Add" Name="Signed Application Add" Description="Add access for SignedApp-01" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="SignedApp-01-View" Name="Signed Application View" Description="View access for SignedApp-01" DataTypeCd="YesNo" DefaultValue="No" />
+  </AuthorityAttributeSet>
+  <AuthorityAttributeSet id="NoteSecurity" Name="Note Security Access" Description="Note security access to different note templates">
+    <AuthorityAttribute id="AgentNote-Add" Name="Agent Note - Add" Description="Add access for Agent Notes" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AgentNote-View" Name="Agent Note - View" Description="View access for Agent Notes" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="CompanyNote-Add" Name="Company Note - Add" Description="Add access for Company Notes" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="CompanyNote-View" Name="Company Note - View" Description="View access for Company Notes" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="CompanyPrivledgedNote-Add" Name="Company Privileged Note - Add" Description="Add access for Company Privileged Notes" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="CompanyPrivledgedNote-View" Name="Company Privileged Note - View" Description="View access for Company Privileged Notes" DataTypeCd="YesNo" DefaultValue="No" />
+  </AuthorityAttributeSet>
+  <AuthorityAttributeSet id="TaskSecurity" Name="Task Workflow Security Access" Description="Task security access to different task templates">
+    <AuthorityAttribute id="ApplicationTask0002-Change" Name="ApplicationTask0002-Change" Description="Change access for ApplicationTask0002" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowInboxItemSearch" Name="Allow Inbox Item Search" Description="Allow Inbox Item Search" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowInboxTemplateSearch" Name="Allow Inbox Template Search" Description="Allow Inbox Template Search" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowInboxComplexSearch" Name="Allow Inbox Complex Search" Description="Allow Inbox Complex Search" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowSharedInboxView" Name="Allow sharing of Inbox View" Description="Allow sharing of Inbox View" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="SharedInboxViewRoles" Name="Share Inbox View with these roles" Description="The roles that can be shared using Inbox View" DataTypeCd="String" />
+    <AuthorityAttribute id="SharedDatamartExplorerRoles" Name="Share Datamart Explorer reports with these roles" Description="The roles that can be shared using Datamart Explorer Reports" DataTypeCd="String" />
+  </AuthorityAttributeSet>
+  <AuthorityAttributeSet id="DataReportAccess" Name="Data Report Access" Description="DataReport Authority Attributes">
+    <AuthorityAttribute id="AllowUserInfoDataSet" Name="Allow UserInfo DataSet" Description="Allow Access to UserInfo DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowPolicyStatsDataSet" Name="Allow PolicyStats DataSet" Description="Allow Access To PolicyStats DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowPolicyRenewalOfferStatsDataSet" Name="Allow Policy RenewalOfferStats DataSet" Description="Allow Access To PolicyRenewalOfferStats DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowAccountingStatsDataSet" Name="Allow AccountingStats DataSet" Description="Allow Access To AccountingStats DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowRenewalOfferStatsDataSet" Name="Allow RenewalOfferStats DataSet" Description="Allow Access To RenewalOfferStats DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowClaimStatsDataSet" Name="Allow ClaimStats DataSet" Description="Allow Access To ClaimStats DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowAccountStatsDataSet" Name="Allow AccountStats DataSet" Description="Allow Access To AccountStats DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowPayableStatsDataSet" Name="Allow PayableStats DataSet" Description="Allow Access To PayableStats DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowPolicyReinsuranceStatsDataSet" Name="Allow PolicyReinsuranceStats DataSet" Description="Allow Access To PolicyReinsuranceStats DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowClaimReinsuranceStatsDataSet" Name="Allow ClaimReinsuranceStats DataSet" Description="Allow Access To ClaimReinsuranceStats DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowPolicySummaryStatsDataSet" Name="Allow PolicySummaryStats DataSet" Description="Allow Access To PolicySummaryStats DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowAccountingSummaryStatsDataSet" Name="Allow AccountingSummaryStats DataSet" Description="Allow Access To AccountSummaryStats DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowClaimSummaryStatsDataSet" Name="Allow ClaimSummaryStats DataSet" Description="Allow Access To ClaimSummaryStats DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowBillingAccountSummaryStatsDataSet" Name="Allow BillingAccountSummaryStats DataSet" Description="Allow Access To BillingAccountSummaryStats DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowPolicyReinsuranceSummaryStatsDataSet" Name="Allow PolicyReinsuranceSummaryStats DataSet" Description="Allow Access To PolicyReinsuranceSummaryStats DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowClaimReinsuranceSummaryStatsDataSet" Name="Allow ClaimReinsuranceSummaryStats DataSet" Description="Allow Access To ClaimReinsuranceSummaryStats DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowQuoteInfoWithProviderDataSet" Name="Allow QuoteInfoWithProvider DataSet" Description="Allow Access To QuoteInfoWithProvider DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowUserInfoDataSetLastLogonDt" Name="Allow Access To Userinfo DataSet LastLogonDt field" Description="Allow Access To Userinfo DataSet LastLogonDt field" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowUserInfoDataSetLastLogonTm" Name="Allow Access To Userinfo DataSet LastLogonTm field" Description="Allow Access To Userinfo DataSet LastLogonTm field" DataTypeCd="YesNo" DefaultValue="Yes" />
+    <AuthorityAttribute id="AllowAccountBalanceDataSet" Name="Allow Access To Account Balance DataSet" Description="Allow Access To Account Balance DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowDayBalanceDataSet" Name="Allow Access To Day Balance DataSet" Description="Allow Access To Day Balance DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowDayBalanceDetailDataSet" Name="Allow Access To Day Balance Detail DataSet" Description="Allow Access To Day Balance Detail DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowEOMBalanceDataSet" Name="Allow Access To EOM Balance DataSet" Description="Allow Access To EOM Balance DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowEOMBalanceDetailDataSet" Name="Allow Access To EOM Balance Detail DataSet" Description="Allow Access To EOM Detail Balance DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowOutOfBalanceDataSet" Name="Allow Access To Out Of Balance DataSet" Description="Allow Access To Out Of Balance DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowExperienceReportDataSet" Name="Allow Access To Experience Report DataSet" Description="Allow Access To Experience Report DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowTransactionCountDataSet" Name="Allow Access To Transaction Count DataSet" Description="Allow Access To Transaction Count DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowExperienceChartDataSet" Name="Allow Access To Experience Chart DataSet" Description="Allow Access To Experience Chart DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowProductionExperienceStatsDataSet" Name="Allow Access To Production Experience Stats DataSet" Description="Allow Access To Production Experience Stats DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowReinsuranceRecapDataSet" Name="Allow Access To Reinsurance Recap DataSet" Description="Allow Access To Reinsurance Recap DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowAnnualStatementDataSet" Name="Allow Access To Annual Statement DataSet" Description="Allow Access To Annual Statement DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowSchedulePDataSet" Name="Allow Access To Schedule P DataSet" Description="Allow Access To Schedule P DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowRolling12MonthDataSet" Name="Allow Access To Rolling 12 Month DataSet" Description="Allow Access To Rolling 12 Month DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowExperienceRankingDataSet" Name="Allow Access To Experience Ranking DataSet" Description="Allow Access To Experience Ranking DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowInforceDataSet" Name="Allow Access To Inforce DataSet" Description="Allow Access To Inforce DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowPremiumTransactionExperienceDataSet" Name="Allow Access To Premium Transaction Experience DataSet" Description="Allow Access To Premium Transaction Experience DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowCommissionDetailDataSet" Name="Allow CommissionDetail DataSet" Description="Allow Access To CommissionDetail DataSet" DataTypeCd="YesNo" DefaultValue="No" />
+  </AuthorityAttributeSet>
+  <AuthorityAttributeSet id="Subscription" Name="Subscription Authority" Description="Attributes for Subscription Authority">
+    <AuthorityAttribute id="AllowSubscriptionMaintenance" Name="Allow Subscription Maintenance" Description="Allow Subscription Maintenance" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowTaskAssignmentSubscription" Name="Allow Task Assignment Subscription" Description="Allow Task Assignment Subscription" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowAgentLossPaymentSubscription" Name="Allow Agent Loss Payment Subscription" Description="Allow Agent Loss Payment Subscription" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowCommissionStatementSubscription" Name="Allow Commission Statement Subscription" Description="Allow Commission Statement Subscription" DataTypeCd="YesNo" DefaultValue="No" />
+  </AuthorityAttributeSet>
+  <AuthorityAttributeSet id="UserManagement" Name="User Management" Description="Attributes for User Management">
+    <AuthorityAttribute id="Site-Policy-UserManagement" Name="Site-Policy-UserManagement" Description="User Management for Underwriting" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="Site-Claim-UserManagement" Name="Site-Claim-UserManagement" Description="User Management for Claims" DataTypeCd="YesNo" DefaultValue="No" />
+  </AuthorityAttributeSet>
+  <AuthorityAttributeSet id="ProducerManagement" Name="Producer Management" Description="Attributes for Producer Management">
+    <AuthorityAttribute id="AllowEditMe" Name="Allow user to edit themself" Description="Allow user to edit themself" DataTypeCd="YesNo" DefaultValue="No" />
+    <AuthorityAttribute id="AllowEditOthers" Name="Allow user to edit other producers" Description="Allow user to edit other producers" DataTypeCd="YesNo" DefaultValue="No" />
+  </AuthorityAttributeSet>
+  <AuthorityAttributeSet id="CabinetManagement" Name="Cabinet Management" Description="Attributes for Cabinet Management">
+    <AuthorityAttribute id="AllowAddCabinet" Name="Allow user to add a cabinet" Description="Allow user to add a cabinet" DataTypeCd="YesNo" DefaultValue="No" />
+  </AuthorityAttributeSet>
+</AuthorityAttributeSets>
+
