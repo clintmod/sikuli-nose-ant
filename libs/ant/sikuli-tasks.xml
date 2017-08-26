@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <project name="sk-tasks" >
 	
-	<property name="project.root" location="../../../../" />
+	<property name="project.root" location="../.." />
 	<property name="imports.dir" value="${project.root}/test/sikuli/ant"/>
 	<property name="tests.dir" value="${project.root}/test/sikuli"/>
 

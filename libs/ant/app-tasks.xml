@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
 	
-	<property name="project.root" value="../../.." />
+	<property name="project.root" value="../.." />
 	<property name="air.roaming.dir" location="${user.home}/AppData/Roaming" />
 	<property name="jenkins.url" value="http://jenkins.somecompany.net:8080" />
 	<property name="powertools.env" value="dev"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
 	<property environment="env"/>
-	<property name="project.root" value="../../.." />
+	<property name="project.root" value="../.." />
 	<property name="cvs.server" value="sj1-qa02.somecompany.net" />
 	
 	<target name="cvs-setup" depends="cygwin-setup, ssh-configure, ssh-test"

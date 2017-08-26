@@ -6,7 +6,7 @@ class AftModel:
 		return path.join(self.project_root(), "test/sikuli/libs")
 
 	def project_root(self):
-		return path.realpath(path.join(path.dirname(path.realpath(__file__)), "../../.."))
+		return path.realpath(path.join(path.dirname(path.realpath(__file__)), "../.."))
 
 	def src_dir(self):
 		return path.join(self.project_root(), "src")

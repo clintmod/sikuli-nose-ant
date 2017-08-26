@@ -5,9 +5,9 @@
 	</description>
 	<property file="overrides.properties" />
 	<property environment="env" />
-	<property name="project.root" location="../.." />
+	<property name="project.root" location="." />
 	<property name="aft.reports.dir" location="${project.root}/reports/aft" />
-	<property name="aft.tests.dir" location="${project.root}/test/sikuli"/>
+	<property name="aft.tests.dir" location="${project.root}"/>
 	<property name="libs.dir" location="${project.root}/libs"/>
 	<property name="imports.dir" location="${aft.tests.dir}/libs/ant"/>
 	<property name="sikuli.dir" location="${libs.dir}/sikuli/1.1.0"/>

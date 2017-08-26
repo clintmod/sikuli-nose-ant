@@ -2,7 +2,7 @@
 <project>
 
 	<property environment="env" />
-	<property name="libs.dir" location="../../../libs"/>
+	<property name="libs.dir" location="../../libs"/>
 	<property name="lib.ant.dir" location="${libs.dir}/ant"/>
 	
 	<taskdef resource="net/sf/antcontrib/antlib.xml">
