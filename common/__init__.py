@@ -6,7 +6,7 @@ setAutoWaitTimeout(120)
 import os
 from aft_model import AftModel
 
-myPath = os.path.dirname(getBundlePath()) + os.sep + "libs"
+myPath = os.path.dirname(getBundlePath()) + os.sep + "libs" 
 if not myPath in sys.path: sys.path.append(myPath)
 
 myPath = os.path.dirname(getBundlePath()) + os.sep + "common"

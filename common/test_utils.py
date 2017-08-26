@@ -151,7 +151,10 @@ class TestRunner(object):
 		self.init_values()
 		self.parse_was_called = True
 		args = args or []
+		print "args = " + str(args)
 		for index, arg in enumerate(args):
+			if arg is None:
+				continue
 			if "-groups=" in arg:
 				groups_csv_string = arg.replace("-groups=", "")
 				if groups_csv_string != "":
@@ -195,6 +198,7 @@ class TestRunner(object):
 			"--verbosity={0}".format(self.verbosity),
 			"--with-screen-capture",
 			"--with-live-results",
+			"--nocapture"
 		]
 		return_val.insert(self.id_index, "--with-id")
 		return_val.append("-w")

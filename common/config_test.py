@@ -3,11 +3,12 @@ import os
 from config import Config
 from nose.plugins.attrib import attr
 from environment_model import EnvironmentModel
+import shutil
 
 env_model = EnvironmentModel()
 
 base_folder = env_model.workspace() or env_model.cust_demo_path() or os.path.expanduser("~")
-test_config_file_path = os.path.join(base_folder, "..", "config-test.json")
+test_config_file_path = os.path.join(base_folder, "config-test.json")
 
 @attr("unit", "config")
 class ConfigOrderedUnitTest(unittest.TestCase):
@@ -15,18 +16,21 @@ class ConfigOrderedUnitTest(unittest.TestCase):
 	def setUp(self):
 		self.sut = Config(config_file_path = test_config_file_path)
 		self.sut.delete_config()
+		if not os.path.exists("temp"):
+			os.makedirs("temp")
 
 	def tearDown(self):
 		self.sut.delete_config()
+		shutil.rmtree("temp")
 
 	def test_current_project_path(self):
 		self.assertIsNone(self.sut.current_project_path)
-		self.sut.current_project_path = "c:\windows"
-		self.assertEqual("c:\windows", self.sut.current_project_path)
+		self.sut.current_project_path = "temp"
+		self.assertEqual("temp", self.sut.current_project_path)
 		self.sut.flush_config()
 		self.assertIsNone(self.sut.current_project_path)
 		self.sut.load_config()
-		self.assertEqual("c:\windows", self.sut.current_project_path)
+		self.assertEqual("temp", self.sut.current_project_path)
 		self.sut.current_project_path = None
 		self.assertIsNone(self.sut.current_project_path)
 		self.sut.flush_config()

@@ -112,7 +112,7 @@ class ScreenUtils(object):
 		try:
 			env_captures_path = os.environ["CAPTURES_DIR"]
 		except Exception as e:
-			env_captures_path = "c:\\temp\\powertools\unittests\captures"
+			env_captures_path = "../captures"
 		self.captures_path = captures_path or env_captures_path
 		self.ensure_captures_dir_is_created()
 		

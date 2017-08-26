@@ -1,0 +1,6 @@
+
+*.class
+**/classes
+reports
+temp
+.noseids

@@ -10,9 +10,17 @@
 	<property name="aft.tests.dir" location="${project.root}"/>
 	<property name="libs.dir" location="${project.root}/libs"/>
 	<property name="imports.dir" location="${aft.tests.dir}/libs/ant"/>
-	<property name="sikuli.dir" location="${libs.dir}/sikuli/1.1.0"/>
 	
 	<import file="${imports.dir}/core-tasks.xml" />
+
+	<if><os family="windows" /><then>
+		<property name="sikuli.dir" location="${libs.dir}/sikuli/win"/>
+	</then><elseif><os family="mac" /><then>
+		<property name="sikuli.dir" location="${libs.dir}/sikuli/mac"/>
+	</then></elseif><else>
+		<fail message="OS not supported." />
+	</else></if>
+
 	<import file="${imports.dir}/cvs-tasks.xml" />
 	<import file="${imports.dir}/app-tasks.xml" />
 	<import file="${imports.dir}/project-tasks.xml" />
@@ -71,7 +79,7 @@
 						ant test-aft-run -Daft.groups="unit,powertools"  Only run groups unit and powertools &#10;
 						ant test-aft-run -Daft.collect=1  Only display the list of tests in the order that they will run &#10;
 						ant test-aft-run -Daft.ids="10,11" Only run the tests with ids 10 and 11&#10;
-						ant test-aft-run -Daft.modules="common/utils_test.py,common/powertools_test.py" Only run the tests from these modules 11&#10;
+						ant test-aft-run -Daft.modules="common/utils_test.py,common/powertools_test.py" Only run the tests from these modules&#10;
 						ant test-aft-run -Daft.failed=1 Only run the tests that failed on the last run &#10;
 				'>
 		<run-sk-script path="${aft.tests.dir}/runtests.sikuli">
@@ -79,7 +87,7 @@
 				<arg line="-- "/>
 				<arg line="-working-dir=${aft.tests.dir}" />
 				<arg value="-reports-dir=${aft.reports.dir}" />
-				<arg value="-verbosity=2" />
+				<arg value="-verbosity=3" />
 				<arg line="${aft.ids.arg} ${aft.modules.arg}" />
 				<arg line="${aft.collect.arg} ${aft.groups.arg} ${aft.failed.arg}" />
 			</additional-args>

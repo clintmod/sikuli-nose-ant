@@ -8,7 +8,7 @@ class AppDescriptorTest(unittest.TestCase):
  	
 	def setUp(self):
 		self.sut = AppDescriptor()
-		self.sut.file_path = os.path.dirname(os.path.realpath(__file__)) + r"\testfiles\xml\PowerToolsDesktop-app.xml"
+		self.sut.file_path = os.path.dirname(os.path.realpath(__file__)) + r"/testfiles/xml/PowerToolsDesktop-app.xml"
  	
 	def tearDown(self):
 		pass

@@ -32,10 +32,10 @@ class FlexTextImageGenerator:
 		self.aft_model = AftModel()
 
 	def adl_path(self):
-		return self.environment_model.flex_home() + r'\bin\adl.exe'
+		return self.environment_model.flex_home() + r'/bin/adl'
 
 	def flex_image_generator_path(self):
-		return self.aft_model.libs_dir() + r"\air\FlexTextImageGenerator-app.xml"
+		return self.aft_model.libs_dir() + r"/air/FlexTextImageGenerator-app.xml"
 
 	def command_string(self):
 		return '"' + self.adl_path() + '" ' + self.flex_image_generator_path()

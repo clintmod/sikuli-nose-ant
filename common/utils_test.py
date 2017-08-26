@@ -115,7 +115,7 @@ class ShellTest(unittest.TestCase):
 class ScreenUtilsUnitTest(unittest.TestCase):
 
 	def setUp(self):
-		self.sut = ScreenUtils(captures_path = "c:\\temp\\test")
+		self.sut = ScreenUtils(captures_path = "../captures")
 	
 	def tearDown(self):
 		pass

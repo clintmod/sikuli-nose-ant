@@ -2,8 +2,7 @@
 <project name="sk-tasks" >
 	
 	<property name="project.root" location="../.." />
-	<property name="imports.dir" value="${project.root}/test/sikuli/ant"/>
-	<property name="tests.dir" value="${project.root}/test/sikuli"/>
+	<property name="tests.dir" value="${project.root}"/>
 
 	<property name="sikuli.Debug" value="3" />
 	
@@ -65,7 +64,7 @@
 				<property name="sikuli.Debug.arg" value=""/>
 			</else></if>
 			<antcall target="python-clean" />
-			<exec executable="java.exe" failonerror="true">
+			<exec executable="java" failonerror="true">
 		 		<arg line="-Xms64M -Xmx512M -Dfile.encoding=UTF-8 ${sikuli.Debug.arg}" />
 		 		<arg value="-Dsikuli.FromCommandLine" />
 		 		<arg line="-jar '${sikuli.dir}/sikulix.jar'" />
